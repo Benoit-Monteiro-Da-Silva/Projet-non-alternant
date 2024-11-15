@@ -1,0 +1,240 @@
+/* adlam-display-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'ADLaM Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/adlam-display-v1-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* inter-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/inter-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* inter-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/inter-v18-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* inter-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/inter-v18-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* inter-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/inter-v18-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /*Variables*/
+
+  :root {
+    --header-icon-size: 3.5rem;
+    --header-padding-block: 1rem;
+    --hearder-padding-inline: 1.6rem;
+    --second-color: #504E4E;
+    --third-color: #4B4949;
+    --filter-hover-color: #5D5B5B;
+  }
+
+
+  /*Body rules*/
+
+  body {
+    background-color: #3B3939;
+    color: white;
+    font-family: 'Inter', 'sans-serif';
+    font-size: 1.4rem;
+  }
+
+
+  /*Header rules*/
+
+  header {
+    background-color: #363434;
+    padding: var(--header-padding-block) var(--hearder-padding-inline);
+    position: fixed;
+    width: 100%;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+  }
+
+  .logo {
+    height: var(--header-icon-size);
+    width: var(--header-icon-size);
+    margin-right: auto;
+  }
+
+  .search-button, .connexion-button, .connexion-button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+
+  .search-button, .connexion-button {
+    background-color: initial;
+  }
+
+  .connexion-button-icon {
+    background-color: #D9D9D9;
+    height: var(--header-icon-size);
+    width: var(--header-icon-size);
+    border-radius: 50%;
+  }
+
+  .search-bar, .connexion-button-text {
+    display: none;
+  }
+
+
+  /*Main rules*/
+
+  main {
+    padding-top: calc(var(--header-icon-size) + var(--header-padding-block)*2 + 2.4rem);
+    padding-inline: 2.4rem;
+    margin-bottom: 13.2rem;
+  }
+
+  h1 {
+    font-family: 'ADLam Display', 'sans-serif';
+    font-weight: 400;
+    font-size: 3.2rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+
+  /*Filters rules*/
+
+  .filters-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2.8rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .filter-active, .filter-inactive {
+    border-radius: 2rem;
+    border: none;
+    padding: 1rem;
+  }
+
+  .filter-active {
+    background-color: white;
+    color: black;
+  }
+
+  .filter-inactive {
+    background-color: var(--second-color);
+    color: white;
+  }
+
+  .filter-inactive:hover {
+    background-color: var(--filter-hover-color);
+  }
+
+
+  /*Articles rules*/
+
+  .articles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  article {
+    background-color: var(--second-color);
+    padding: 1.6rem;
+    border-radius: .8rem;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.5);
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 2rem;
+
+    margin-bottom: 1rem;
+  }
+
+  .tags-list {
+    display: flex;
+    gap: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .tags-list li {
+    background-color: var(--third-color);
+    border: 1px solid #817C7C;
+    color: #C6C3C3;
+    border-radius: .5rem;
+    padding: .1rem 1rem;
+  }
+
+  .article-thumbnail p, .article-thumbnail img {
+    margin-block: 1.2rem;
+  }
+
+  .article-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .article-author, .article-comments, .article-upvotes {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  .article-author {
+    font-weight: 600;
+  }
+
+
+  /*Footer rules*/
+
+  .page-footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    text-align: center;
+    margin-bottom: 16rem;
+  }
+
+  .page-footer-list a {
+    text-decoration: underline;
+  }
+
+  .page-footer-list a:hover {
+    text-decoration: none;
+  }
+
