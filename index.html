@@ -11,17 +11,18 @@
 </head>
 <body>
 
-    <header role="banner">
+    <header class="page-header" role="banner">
         <nav class="header-nav">
             <a href="index.html" class="logo">
                 <img src="img/logo.png" alt="home">
+                <span class="logo-title">Code-Sharing</span>
             </a>
 
             <form action="#" method="get">
                 <input type="search" placeholder="Search" class="search-bar">
                 <button class="search-button">
                     <span class="sr-only">Search</span>
-                    <svg aria-hidden="true" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg aria-hidden="true" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M27.3155 23.4209L22.8495 18.6698L19.4144 17.1601C20.5582 15.4297 21.171 13.3654 21.1688 11.25C21.1688 5.56365 16.8202 0.9375 11.475 0.9375C6.12983 0.9375 1.78125 5.56365 1.78125 11.25C1.78125 16.9363 6.12983 21.5625 11.475 21.5625C13.4807 21.5649 15.4373 20.9018 17.072 19.6654L18.4875 23.3099L22.9533 28.0612C23.2397 28.3659 23.5797 28.6076 23.9539 28.7725C24.3281 28.9374 24.7292 29.0223 25.1343 29.0223C25.5393 29.0224 25.9404 28.9375 26.3146 28.7726C26.6889 28.6077 27.0289 28.366 27.3153 28.0613C27.6018 27.7566 27.829 27.3949 27.984 26.9968C28.139 26.5987 28.2188 26.172 28.2188 25.7411C28.2188 25.3102 28.1391 24.8835 27.9841 24.4854C27.8291 24.0873 27.6019 23.7256 27.3155 23.4209ZM3.54375 11.25C3.54375 6.59766 7.1018 2.8125 11.475 2.8125C15.8482 2.8125 19.4063 6.59766 19.4063 11.25C19.4063 15.9023 15.8482 19.6875 11.475 19.6875C7.1018 19.6875 3.54375 15.9023 3.54375 11.25ZM26.0691 26.7354C25.821 26.9987 25.4848 27.1466 25.1344 27.1466C24.7839 27.1466 24.4478 26.9987 24.1996 26.7354L19.9822 22.2487L18.6662 18.86L21.8517 20.26L26.0692 24.7467C26.3167 25.0106 26.4557 25.3682 26.4556 25.741C26.4556 26.1139 26.3166 26.4715 26.0691 26.7354Z" fill="white"/>
                     </svg>
                 </button>
@@ -34,275 +35,249 @@
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9444 10.5556C11.9444 9.08213 12.5298 7.66905 13.5716 6.62718C14.6135 5.58532 16.0266 5 17.5 5C18.9734 5 20.3865 5.58532 21.4284 6.62718C22.4702 7.66905 23.0556 9.08213 23.0556 10.5556C23.0556 12.029 22.4702 13.4421 21.4284 14.4839C20.3865 15.5258 18.9734 16.1111 17.5 16.1111C16.0266 16.1111 14.6135 15.5258 13.5716 14.4839C12.5298 13.4421 11.9444 12.029 11.9444 10.5556ZM11.9444 18.8889C10.1027 18.8889 8.33632 19.6205 7.03398 20.9229C5.73164 22.2252 5 23.9916 5 25.8333C5 26.9384 5.43899 27.9982 6.22039 28.7796C7.00179 29.561 8.0616 30 9.16667 30H25.8333C26.9384 30 27.9982 29.561 28.7796 28.7796C29.561 27.9982 30 26.9384 30 25.8333C30 23.9916 29.2684 22.2252 27.966 20.9229C26.6637 19.6205 24.8973 18.8889 23.0556 18.8889H11.9444Z"/>
                     </svg>
                 </div>
-                <p class="connexion-button-text">Connexion</p>
+                <span class="connexion-button-text" aria-hidden="true">Connexion</span>
             </button>
         </nav>
     </header>
 
     <main role="main">
-        <h1>Code-Sharing</h1>
-        <h2>Explore the dev world !</h2>
+        <section class="section-hero">
+            <h1>Code-Sharing</h1>
+            <h2>Explore the dev world !</h2>
+    
+            <ul class="filters-list">
+                <li><button class="filter-active">Most recent</button></li>
+                <li><button class="filter-inactive">Most recommended</button></li>
+            </ul>
+        </section>
 
-        <ul class="filters-list">
-            <li><button class="filter-active">Most recent</button></li>
-            <li><button class="filter-inactive">Most recommended</button></li>
-        </ul>
+        <section class="section-articles">
+            <ul class="articles-list">
+                <li class="article-card">
+                    <a href="#">
+                        <article>
+                            <h3>Lorem Ipsum</h3>
+                            <ul class="tags-list">
+                                <li>#html</li>
+                                <li>#css</li>
+                                <li>#javascript</li>
+                            </ul>
+                            <time datetime="2020-07-13">Jul 13, 2023</time>
 
-        <ul class="articles-list">
-            <li>
-                <a href="#">
-                    <article>
-                        <h3>Lorem Ipsum</h3>
-                        <ul class="tags-list">
-                            <li>#html</li>
-                            <li>#css</li>
-                            <li>#javascript</li>
-                        </ul>
-                        <time datetime="2020-07-13">Jul 13, 2023</time>
-
-                        <figure class="article-thumbnail">
-                            <figcaption>  <!--Est-ce plutôt un <blockquote> ??-->
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec...</p>
-                            </figcaption>
-                            <img src="img/article-picture-1.png" alt="">
-                        </figure>
-
-                        <footer class="article-footer">
-                            <figure class="article-author">
-                                <img src="img/user-picture.png" alt="">
-                                <figcaption>
-                                    <p>Justine D.</p>
-                                </figcaption>
-                            </figure>
-
-                            <figure class="article-comments">
-                                <span class="sr-only">number of comments</span>
-                                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21.6803 4C21.6803 2.9 20.8028 2 19.7183 2H3.94363C2.85913 2 1.9718 2.9 1.9718 4V16C1.9718 17.1 2.85913 18 3.94363 18H17.7464L21.6901 22L21.6803 4ZM19.7183 4V17.17L18.5648 16H3.94363V4H19.7183ZM5.91546 12H17.7464V14H5.91546V12ZM5.91546 9H17.7464V11H5.91546V9ZM5.91546 6H17.7464V8H5.91546V6Z" fill="white"/>
-                                </svg>
-                                <figcaption>
-                                    <p>21</p>
-                                </figcaption>
-                            </figure>
-
-                            <figure class="article-upvotes">
-                                <span class="sr-only">number of upvotes</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 21C10.346 21 8.99997 19.654 8.99997 18V13.236C7.85697 14.26 5.97497 14.215 4.87897 13.121C4.31656 12.5584 4.00061 11.7955 4.00061 11C4.00061 10.2045 4.31656 9.44158 4.87897 8.879L12 1.758L19.121 8.879C19.6834 9.44158 19.9993 10.2045 19.9993 11C19.9993 11.7955 19.6834 12.5584 19.121 13.121C18.027 14.216 16.142 14.261 15 13.236V18C15 19.654 13.654 21 12 21ZM11 8.414V18C11.0115 18.2575 11.1219 18.5006 11.3082 18.6787C11.4944 18.8569 11.7422 18.9563 12 18.9563C12.2577 18.9563 12.5055 18.8569 12.6918 18.6787C12.8781 18.5006 12.9885 18.2575 13 18V8.414L16.293 11.707C16.4833 11.889 16.7366 11.9906 17 11.9906C17.2634 11.9906 17.5166 11.889 17.707 11.707C17.8944 11.5195 17.9998 11.2652 17.9998 11C17.9998 10.7348 17.8944 10.4805 17.707 10.293L12 4.586L6.29297 10.293C6.1055 10.4805 6.00018 10.7348 6.00018 11C6.00018 11.2652 6.1055 11.5195 6.29297 11.707C6.48334 11.889 6.73658 11.9906 6.99997 11.9906C7.26336 11.9906 7.5166 11.889 7.70697 11.707L11 8.414Z" fill="white"/>
-                                </svg>
-                                <figcaption>
-                                    <p>73</p>
-                                </figcaption>
-                            </figure>
-                        </footer>
-                    </article>
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                    <article>
-                        <h3>Lorem Ipsum</h3>
-                        <ul class="tags-list">
-                            <li>#html</li>
-                            <li>#css</li>
-                            <li>#javascript</li>
-                        </ul>
-                        <time datetime="2020-07-13">Jul 13, 2023</time>
-
-                        <figure class="article-thumbnail">
-                            <figcaption>  <!--Est-ce plutôt un <blockquote> ??-->
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec...</p>
-                            </figcaption>
-                            <img src="img/article-picture-2.png" alt="">
-                        </figure>
-
-                        <footer class="article-footer">
-                            <figure class="article-author">
-                                <img src="img/user-picture.png" alt="">
-                                <figcaption>
-                                    <p>Justine D.</p>
-                                </figcaption>
-                            </figure>
-
-                            <figure class="article-comments">
-                                <span class="sr-only">number of comments</span>
-                                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21.6803 4C21.6803 2.9 20.8028 2 19.7183 2H3.94363C2.85913 2 1.9718 2.9 1.9718 4V16C1.9718 17.1 2.85913 18 3.94363 18H17.7464L21.6901 22L21.6803 4ZM19.7183 4V17.17L18.5648 16H3.94363V4H19.7183ZM5.91546 12H17.7464V14H5.91546V12ZM5.91546 9H17.7464V11H5.91546V9ZM5.91546 6H17.7464V8H5.91546V6Z" fill="white"/>
-                                </svg>
-                                <figcaption>
-                                    <p>21</p>
-                                </figcaption>
-                            </figure>
-
-                            <figure class="article-upvotes">
-                                <span class="sr-only">number of upvotes</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 21C10.346 21 8.99997 19.654 8.99997 18V13.236C7.85697 14.26 5.97497 14.215 4.87897 13.121C4.31656 12.5584 4.00061 11.7955 4.00061 11C4.00061 10.2045 4.31656 9.44158 4.87897 8.879L12 1.758L19.121 8.879C19.6834 9.44158 19.9993 10.2045 19.9993 11C19.9993 11.7955 19.6834 12.5584 19.121 13.121C18.027 14.216 16.142 14.261 15 13.236V18C15 19.654 13.654 21 12 21ZM11 8.414V18C11.0115 18.2575 11.1219 18.5006 11.3082 18.6787C11.4944 18.8569 11.7422 18.9563 12 18.9563C12.2577 18.9563 12.5055 18.8569 12.6918 18.6787C12.8781 18.5006 12.9885 18.2575 13 18V8.414L16.293 11.707C16.4833 11.889 16.7366 11.9906 17 11.9906C17.2634 11.9906 17.5166 11.889 17.707 11.707C17.8944 11.5195 17.9998 11.2652 17.9998 11C17.9998 10.7348 17.8944 10.4805 17.707 10.293L12 4.586L6.29297 10.293C6.1055 10.4805 6.00018 10.7348 6.00018 11C6.00018 11.2652 6.1055 11.5195 6.29297 11.707C6.48334 11.889 6.73658 11.9906 6.99997 11.9906C7.26336 11.9906 7.5166 11.889 7.70697 11.707L11 8.414Z" fill="white"/>
-                                </svg>
-                                <figcaption>
-                                    <p>73</p>
-                                </figcaption>
-                            </figure>
-                        </footer>
-                    </article>
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                    <article>
-                        <h3>Lorem Ipsum</h3>
-                        <ul class="tags-list">
-                            <li>#html</li>
-                            <li>#css</li>
-                            <li>#javascript</li>
-                        </ul>
-                        <time datetime="2020-07-13">Jul 13, 2023</time>
-
-                        <figure class="article-thumbnail">
-                            <figcaption>  <!--Est-ce plutôt un <blockquote> ??-->
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec...</p>
-                            </figcaption>
-                            <img src="img/article-picture-3.png" alt="">
-                        </figure>
-
-                        <footer class="article-footer">
-                            <figure class="article-author">
-                                <img src="img/user-picture.png" alt="">
-                                <figcaption>
-                                    <p>Justine D.</p>
-                                </figcaption>
-                            </figure>
-
-                            <figure class="article-comments">
-                                <span class="sr-only">number of comments</span>
-                                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21.6803 4C21.6803 2.9 20.8028 2 19.7183 2H3.94363C2.85913 2 1.9718 2.9 1.9718 4V16C1.9718 17.1 2.85913 18 3.94363 18H17.7464L21.6901 22L21.6803 4ZM19.7183 4V17.17L18.5648 16H3.94363V4H19.7183ZM5.91546 12H17.7464V14H5.91546V12ZM5.91546 9H17.7464V11H5.91546V9ZM5.91546 6H17.7464V8H5.91546V6Z" fill="white"/>
-                                </svg>
-                                <figcaption>
-                                    <p>21</p>
-                                </figcaption>
-                            </figure>
-
-                            <figure class="article-upvotes">
-                                <span class="sr-only">number of upvotes</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 21C10.346 21 8.99997 19.654 8.99997 18V13.236C7.85697 14.26 5.97497 14.215 4.87897 13.121C4.31656 12.5584 4.00061 11.7955 4.00061 11C4.00061 10.2045 4.31656 9.44158 4.87897 8.879L12 1.758L19.121 8.879C19.6834 9.44158 19.9993 10.2045 19.9993 11C19.9993 11.7955 19.6834 12.5584 19.121 13.121C18.027 14.216 16.142 14.261 15 13.236V18C15 19.654 13.654 21 12 21ZM11 8.414V18C11.0115 18.2575 11.1219 18.5006 11.3082 18.6787C11.4944 18.8569 11.7422 18.9563 12 18.9563C12.2577 18.9563 12.5055 18.8569 12.6918 18.6787C12.8781 18.5006 12.9885 18.2575 13 18V8.414L16.293 11.707C16.4833 11.889 16.7366 11.9906 17 11.9906C17.2634 11.9906 17.5166 11.889 17.707 11.707C17.8944 11.5195 17.9998 11.2652 17.9998 11C17.9998 10.7348 17.8944 10.4805 17.707 10.293L12 4.586L6.29297 10.293C6.1055 10.4805 6.00018 10.7348 6.00018 11C6.00018 11.2652 6.1055 11.5195 6.29297 11.707C6.48334 11.889 6.73658 11.9906 6.99997 11.9906C7.26336 11.9906 7.5166 11.889 7.70697 11.707L11 8.414Z" fill="white"/>
-                                </svg>
-                                <figcaption>
-                                    <p>73</p>
-                                </figcaption>
-                            </figure>
-                        </footer>
-                    </article>
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                    <article>
-                        <h3>Lorem Ipsum</h3>
-                        <ul class="tags-list">
-                            <li>#html</li>
-                            <li>#css</li>
-                            <li>#javascript</li>
-                        </ul>
-                        <time datetime="2020-07-13">Jul 13, 2023</time>
-
-                        <figure class="article-thumbnail">
-                            <figcaption>  <!--Est-ce plutôt un <blockquote> ??-->
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec...</p>
-                            </figcaption>
-                            <img src="img/article-picture-4.png" alt="">
-                        </figure>
-
-                        <footer class="article-footer">
-                            <figure class="article-author">
-                                <img src="img/user-picture.png" alt="">
-                                <figcaption>
-                                    <p>Justine D.</p>
-                                </figcaption>
-                            </figure>
-
-                            <figure class="article-comments">
-                                <span class="sr-only">number of comments</span>
-                                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21.6803 4C21.6803 2.9 20.8028 2 19.7183 2H3.94363C2.85913 2 1.9718 2.9 1.9718 4V16C1.9718 17.1 2.85913 18 3.94363 18H17.7464L21.6901 22L21.6803 4ZM19.7183 4V17.17L18.5648 16H3.94363V4H19.7183ZM5.91546 12H17.7464V14H5.91546V12ZM5.91546 9H17.7464V11H5.91546V9ZM5.91546 6H17.7464V8H5.91546V6Z" fill="white"/>
-                                </svg>
-                                <figcaption>
-                                    <p>21</p>
-                                </figcaption>
-                            </figure>
-
-                            <figure class="article-upvotes">
-                                <span class="sr-only">number of upvotes</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 21C10.346 21 8.99997 19.654 8.99997 18V13.236C7.85697 14.26 5.97497 14.215 4.87897 13.121C4.31656 12.5584 4.00061 11.7955 4.00061 11C4.00061 10.2045 4.31656 9.44158 4.87897 8.879L12 1.758L19.121 8.879C19.6834 9.44158 19.9993 10.2045 19.9993 11C19.9993 11.7955 19.6834 12.5584 19.121 13.121C18.027 14.216 16.142 14.261 15 13.236V18C15 19.654 13.654 21 12 21ZM11 8.414V18C11.0115 18.2575 11.1219 18.5006 11.3082 18.6787C11.4944 18.8569 11.7422 18.9563 12 18.9563C12.2577 18.9563 12.5055 18.8569 12.6918 18.6787C12.8781 18.5006 12.9885 18.2575 13 18V8.414L16.293 11.707C16.4833 11.889 16.7366 11.9906 17 11.9906C17.2634 11.9906 17.5166 11.889 17.707 11.707C17.8944 11.5195 17.9998 11.2652 17.9998 11C17.9998 10.7348 17.8944 10.4805 17.707 10.293L12 4.586L6.29297 10.293C6.1055 10.4805 6.00018 10.7348 6.00018 11C6.00018 11.2652 6.1055 11.5195 6.29297 11.707C6.48334 11.889 6.73658 11.9906 6.99997 11.9906C7.26336 11.9906 7.5166 11.889 7.70697 11.707L11 8.414Z" fill="white"/>
-                                </svg>
-                                <figcaption>
-                                    <p>73</p>
-                                </figcaption>
-                            </figure>
-                        </footer>
-                    </article>
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                    <article>
-                        <h3>Lorem Ipsum</h3>
-                        <ul class="tags-list">
-                            <li>#html</li>
-                            <li>#css</li>
-                            <li>#javascript</li>
-                        </ul>
-                        <time datetime="2020-07-13">Jul 13, 2023</time>
-
-                        <figure class="article-thumbnail">
-                            <figcaption>  <!--Est-ce plutôt un <blockquote> ??-->
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec...</p>
-                            </figcaption>
-                            <img src="img/article-picture-5.png" alt="">
-                        </figure>
-
-                        <footer class="article-footer">
-                            <figure class="article-author">
-                                <img src="img/user-picture.png" alt="">
-                                <figcaption>
-                                    <p>Justine D.</p>
-                                </figcaption>
-                            </figure>
-
-                            <figure class="article-comments">
-                                <span class="sr-only">number of comments</span>
-                                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21.6803 4C21.6803 2.9 20.8028 2 19.7183 2H3.94363C2.85913 2 1.9718 2.9 1.9718 4V16C1.9718 17.1 2.85913 18 3.94363 18H17.7464L21.6901 22L21.6803 4ZM19.7183 4V17.17L18.5648 16H3.94363V4H19.7183ZM5.91546 12H17.7464V14H5.91546V12ZM5.91546 9H17.7464V11H5.91546V9ZM5.91546 6H17.7464V8H5.91546V6Z" fill="white"/>
-                                </svg>
-                                <figcaption>
-                                    <p>21</p>
-                                </figcaption>
-                            </figure>
-
-                            <figure class="article-upvotes">
-                                <span class="sr-only">number of upvotes</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 21C10.346 21 8.99997 19.654 8.99997 18V13.236C7.85697 14.26 5.97497 14.215 4.87897 13.121C4.31656 12.5584 4.00061 11.7955 4.00061 11C4.00061 10.2045 4.31656 9.44158 4.87897 8.879L12 1.758L19.121 8.879C19.6834 9.44158 19.9993 10.2045 19.9993 11C19.9993 11.7955 19.6834 12.5584 19.121 13.121C18.027 14.216 16.142 14.261 15 13.236V18C15 19.654 13.654 21 12 21ZM11 8.414V18C11.0115 18.2575 11.1219 18.5006 11.3082 18.6787C11.4944 18.8569 11.7422 18.9563 12 18.9563C12.2577 18.9563 12.5055 18.8569 12.6918 18.6787C12.8781 18.5006 12.9885 18.2575 13 18V8.414L16.293 11.707C16.4833 11.889 16.7366 11.9906 17 11.9906C17.2634 11.9906 17.5166 11.889 17.707 11.707C17.8944 11.5195 17.9998 11.2652 17.9998 11C17.9998 10.7348 17.8944 10.4805 17.707 10.293L12 4.586L6.29297 10.293C6.1055 10.4805 6.00018 10.7348 6.00018 11C6.00018 11.2652 6.1055 11.5195 6.29297 11.707C6.48334 11.889 6.73658 11.9906 6.99997 11.9906C7.26336 11.9906 7.5166 11.889 7.70697 11.707L11 8.414Z" fill="white"/>
-                                </svg>
-                                <figcaption>
-                                    <p>73</p>
-                                </figcaption>
-                            </figure>
-                        </footer>
-                    </article>
-                </a>
-            </li>
-        </ul>
+                            <p class="article-preview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec...</p>
+                            <div class="article-thumbnail">
+                                <img src="img/article-picture-1.png" alt="">
+                            </div>
+    
+                            <footer class="article-footer">
+                                <div class="article-author">
+                                    <div class="article-author-picture">
+                                        <img src="img/user-picture.png" alt="">
+                                    </div>
+                                    <span class="author-name">Justine D.</p>
+                                </div>
+    
+                                <div class="article-comments">
+                                    <span class="sr-only">number of comments</span>
+                                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.6803 4C21.6803 2.9 20.8028 2 19.7183 2H3.94363C2.85913 2 1.9718 2.9 1.9718 4V16C1.9718 17.1 2.85913 18 3.94363 18H17.7464L21.6901 22L21.6803 4ZM19.7183 4V17.17L18.5648 16H3.94363V4H19.7183ZM5.91546 12H17.7464V14H5.91546V12ZM5.91546 9H17.7464V11H5.91546V9ZM5.91546 6H17.7464V8H5.91546V6Z" fill="white"/>
+                                    </svg>
+                                    <span class="number-of-comments">21</span>
+                                </div>
+    
+                                <div class="article-upvotes">
+                                    <span class="sr-only">number of upvotes</span>
+                                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 21C10.346 21 8.99997 19.654 8.99997 18V13.236C7.85697 14.26 5.97497 14.215 4.87897 13.121C4.31656 12.5584 4.00061 11.7955 4.00061 11C4.00061 10.2045 4.31656 9.44158 4.87897 8.879L12 1.758L19.121 8.879C19.6834 9.44158 19.9993 10.2045 19.9993 11C19.9993 11.7955 19.6834 12.5584 19.121 13.121C18.027 14.216 16.142 14.261 15 13.236V18C15 19.654 13.654 21 12 21ZM11 8.414V18C11.0115 18.2575 11.1219 18.5006 11.3082 18.6787C11.4944 18.8569 11.7422 18.9563 12 18.9563C12.2577 18.9563 12.5055 18.8569 12.6918 18.6787C12.8781 18.5006 12.9885 18.2575 13 18V8.414L16.293 11.707C16.4833 11.889 16.7366 11.9906 17 11.9906C17.2634 11.9906 17.5166 11.889 17.707 11.707C17.8944 11.5195 17.9998 11.2652 17.9998 11C17.9998 10.7348 17.8944 10.4805 17.707 10.293L12 4.586L6.29297 10.293C6.1055 10.4805 6.00018 10.7348 6.00018 11C6.00018 11.2652 6.1055 11.5195 6.29297 11.707C6.48334 11.889 6.73658 11.9906 6.99997 11.9906C7.26336 11.9906 7.5166 11.889 7.70697 11.707L11 8.414Z" fill="white"/>
+                                    </svg>
+                                    <span class="number-of-upvotes">73</span>
+                                </div>
+                            </footer>
+                        </article>
+                    </a>
+                </li>
+    
+                <li class="article-card">
+                    <a href="#">
+                        <article>
+                            <h3>Lorem Ipsum</h3>
+                            <ul class="tags-list">
+                                <li>#html</li>
+                                <li>#css</li>
+                                <li>#javascript</li>
+                            </ul>
+                            <time datetime="2020-07-13">Jul 13, 2023</time>
+    
+                            <p class="article-preview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec...</p>
+                            <div class="article-thumbnail">
+                                <img src="img/article-picture-2.png" alt="">
+                            </div>
+    
+                            <footer class="article-footer">
+                                <div class="article-author">
+                                    <div class="article-author-picture">
+                                        <img src="img/user-picture.png" alt="">
+                                    </div>
+                                    <span class="author-name">Justine D.</p>
+                                </div>
+    
+                                <div class="article-comments">
+                                    <span class="sr-only">number of comments</span>
+                                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.6803 4C21.6803 2.9 20.8028 2 19.7183 2H3.94363C2.85913 2 1.9718 2.9 1.9718 4V16C1.9718 17.1 2.85913 18 3.94363 18H17.7464L21.6901 22L21.6803 4ZM19.7183 4V17.17L18.5648 16H3.94363V4H19.7183ZM5.91546 12H17.7464V14H5.91546V12ZM5.91546 9H17.7464V11H5.91546V9ZM5.91546 6H17.7464V8H5.91546V6Z" fill="white"/>
+                                    </svg>
+                                    <span class="number-of-comments">21</span>
+                                </div>
+    
+                                <div class="article-upvotes">
+                                    <span class="sr-only">number of upvotes</span>
+                                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 21C10.346 21 8.99997 19.654 8.99997 18V13.236C7.85697 14.26 5.97497 14.215 4.87897 13.121C4.31656 12.5584 4.00061 11.7955 4.00061 11C4.00061 10.2045 4.31656 9.44158 4.87897 8.879L12 1.758L19.121 8.879C19.6834 9.44158 19.9993 10.2045 19.9993 11C19.9993 11.7955 19.6834 12.5584 19.121 13.121C18.027 14.216 16.142 14.261 15 13.236V18C15 19.654 13.654 21 12 21ZM11 8.414V18C11.0115 18.2575 11.1219 18.5006 11.3082 18.6787C11.4944 18.8569 11.7422 18.9563 12 18.9563C12.2577 18.9563 12.5055 18.8569 12.6918 18.6787C12.8781 18.5006 12.9885 18.2575 13 18V8.414L16.293 11.707C16.4833 11.889 16.7366 11.9906 17 11.9906C17.2634 11.9906 17.5166 11.889 17.707 11.707C17.8944 11.5195 17.9998 11.2652 17.9998 11C17.9998 10.7348 17.8944 10.4805 17.707 10.293L12 4.586L6.29297 10.293C6.1055 10.4805 6.00018 10.7348 6.00018 11C6.00018 11.2652 6.1055 11.5195 6.29297 11.707C6.48334 11.889 6.73658 11.9906 6.99997 11.9906C7.26336 11.9906 7.5166 11.889 7.70697 11.707L11 8.414Z" fill="white"/>
+                                    </svg>
+                                    <span class="number-of-upvotes">73</span>
+                                </div>
+                            </footer>
+                        </article>
+                    </a>
+                </li>
+    
+                <li class="article-card">
+                    <a href="#">
+                        <article>
+                            <h3>Lorem Ipsum</h3>
+                            <ul class="tags-list">
+                                <li>#html</li>
+                                <li>#css</li>
+                                <li>#javascript</li>
+                            </ul>
+                            <time datetime="2020-07-13">Jul 13, 2023</time>
+    
+                            <p class="article-preview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec...</p>
+                            <div class="article-thumbnail">
+                                <img src="img/article-picture-3.png" alt="">
+                            </div>
+    
+                            <footer class="article-footer">
+                                <div class="article-author">
+                                    <div class="article-author-picture">
+                                        <img src="img/user-picture.png" alt="">
+                                    </div>
+                                    <span class="author-name">Justine D.</p>
+                                </div>
+    
+                                <div class="article-comments">
+                                    <span class="sr-only">number of comments</span>
+                                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.6803 4C21.6803 2.9 20.8028 2 19.7183 2H3.94363C2.85913 2 1.9718 2.9 1.9718 4V16C1.9718 17.1 2.85913 18 3.94363 18H17.7464L21.6901 22L21.6803 4ZM19.7183 4V17.17L18.5648 16H3.94363V4H19.7183ZM5.91546 12H17.7464V14H5.91546V12ZM5.91546 9H17.7464V11H5.91546V9ZM5.91546 6H17.7464V8H5.91546V6Z" fill="white"/>
+                                    </svg>
+                                    <span class="number-of-comments">21</span>
+                                </div>
+    
+                                <div class="article-upvotes">
+                                    <span class="sr-only">number of upvotes</span>
+                                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 21C10.346 21 8.99997 19.654 8.99997 18V13.236C7.85697 14.26 5.97497 14.215 4.87897 13.121C4.31656 12.5584 4.00061 11.7955 4.00061 11C4.00061 10.2045 4.31656 9.44158 4.87897 8.879L12 1.758L19.121 8.879C19.6834 9.44158 19.9993 10.2045 19.9993 11C19.9993 11.7955 19.6834 12.5584 19.121 13.121C18.027 14.216 16.142 14.261 15 13.236V18C15 19.654 13.654 21 12 21ZM11 8.414V18C11.0115 18.2575 11.1219 18.5006 11.3082 18.6787C11.4944 18.8569 11.7422 18.9563 12 18.9563C12.2577 18.9563 12.5055 18.8569 12.6918 18.6787C12.8781 18.5006 12.9885 18.2575 13 18V8.414L16.293 11.707C16.4833 11.889 16.7366 11.9906 17 11.9906C17.2634 11.9906 17.5166 11.889 17.707 11.707C17.8944 11.5195 17.9998 11.2652 17.9998 11C17.9998 10.7348 17.8944 10.4805 17.707 10.293L12 4.586L6.29297 10.293C6.1055 10.4805 6.00018 10.7348 6.00018 11C6.00018 11.2652 6.1055 11.5195 6.29297 11.707C6.48334 11.889 6.73658 11.9906 6.99997 11.9906C7.26336 11.9906 7.5166 11.889 7.70697 11.707L11 8.414Z" fill="white"/>
+                                    </svg>
+                                    <span class="number-of-upvotes">73</span>
+                                </div>
+                            </footer>
+                        </article>
+                    </a>
+                </li>
+    
+                <li class="article-card">
+                    <a href="#">
+                        <article>
+                            <h3>Lorem Ipsum</h3>
+                            <ul class="tags-list">
+                                <li>#html</li>
+                                <li>#css</li>
+                                <li>#javascript</li>
+                            </ul>
+                            <time datetime="2020-07-13">Jul 13, 2023</time>
+    
+                            <p class="article-preview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec...</p>
+                            <div class="article-thumbnail">
+                                <img src="img/article-picture-4.png" alt="">
+                            </div>
+    
+                            <footer class="article-footer">
+                                <div class="article-author">
+                                    <div class="article-author-picture">
+                                        <img src="img/user-picture.png" alt="">
+                                    </div>
+                                    <span class="author-name">Justine D.</p>
+                                </div>
+    
+                                <div class="article-comments">
+                                    <span class="sr-only">number of comments</span>
+                                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.6803 4C21.6803 2.9 20.8028 2 19.7183 2H3.94363C2.85913 2 1.9718 2.9 1.9718 4V16C1.9718 17.1 2.85913 18 3.94363 18H17.7464L21.6901 22L21.6803 4ZM19.7183 4V17.17L18.5648 16H3.94363V4H19.7183ZM5.91546 12H17.7464V14H5.91546V12ZM5.91546 9H17.7464V11H5.91546V9ZM5.91546 6H17.7464V8H5.91546V6Z" fill="white"/>
+                                    </svg>
+                                    <span class="number-of-comments">21</span>
+                                </div>
+    
+                                <div class="article-upvotes">
+                                    <span class="sr-only">number of upvotes</span>
+                                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 21C10.346 21 8.99997 19.654 8.99997 18V13.236C7.85697 14.26 5.97497 14.215 4.87897 13.121C4.31656 12.5584 4.00061 11.7955 4.00061 11C4.00061 10.2045 4.31656 9.44158 4.87897 8.879L12 1.758L19.121 8.879C19.6834 9.44158 19.9993 10.2045 19.9993 11C19.9993 11.7955 19.6834 12.5584 19.121 13.121C18.027 14.216 16.142 14.261 15 13.236V18C15 19.654 13.654 21 12 21ZM11 8.414V18C11.0115 18.2575 11.1219 18.5006 11.3082 18.6787C11.4944 18.8569 11.7422 18.9563 12 18.9563C12.2577 18.9563 12.5055 18.8569 12.6918 18.6787C12.8781 18.5006 12.9885 18.2575 13 18V8.414L16.293 11.707C16.4833 11.889 16.7366 11.9906 17 11.9906C17.2634 11.9906 17.5166 11.889 17.707 11.707C17.8944 11.5195 17.9998 11.2652 17.9998 11C17.9998 10.7348 17.8944 10.4805 17.707 10.293L12 4.586L6.29297 10.293C6.1055 10.4805 6.00018 10.7348 6.00018 11C6.00018 11.2652 6.1055 11.5195 6.29297 11.707C6.48334 11.889 6.73658 11.9906 6.99997 11.9906C7.26336 11.9906 7.5166 11.889 7.70697 11.707L11 8.414Z" fill="white"/>
+                                    </svg>
+                                    <span class="number-of-upvotes">73</span>
+                                </div>
+                            </footer>
+                        </article>
+                    </a>
+                </li>
+    
+                <li class="article-card">
+                    <a href="#">
+                        <article>
+                            <h3>Lorem Ipsum</h3>
+                            <ul class="tags-list">
+                                <li>#html</li>
+                                <li>#css</li>
+                                <li>#javascript</li>
+                            </ul>
+                            <time datetime="2020-07-13">Jul 13, 2023</time>
+    
+                            <p class="article-preview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec...</p>
+                            <div class="article-thumbnail">
+                                <img src="img/article-picture-5.png" alt="">
+                            </div>
+    
+                            <footer class="article-footer">
+                                <div class="article-author">
+                                    <div class="article-author-picture">
+                                        <img src="img/user-picture.png" alt="">
+                                    </div>
+                                    <span class="author-name">Justine D.</p>
+                                </div>
+    
+                                <div class="article-comments">
+                                    <span class="sr-only">number of comments</span>
+                                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.6803 4C21.6803 2.9 20.8028 2 19.7183 2H3.94363C2.85913 2 1.9718 2.9 1.9718 4V16C1.9718 17.1 2.85913 18 3.94363 18H17.7464L21.6901 22L21.6803 4ZM19.7183 4V17.17L18.5648 16H3.94363V4H19.7183ZM5.91546 12H17.7464V14H5.91546V12ZM5.91546 9H17.7464V11H5.91546V9ZM5.91546 6H17.7464V8H5.91546V6Z" fill="white"/>
+                                    </svg>
+                                    <span class="number-of-comments">21</span>
+                                </div>
+    
+                                <div class="article-upvotes">
+                                    <span class="sr-only">number of upvotes</span>
+                                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 21C10.346 21 8.99997 19.654 8.99997 18V13.236C7.85697 14.26 5.97497 14.215 4.87897 13.121C4.31656 12.5584 4.00061 11.7955 4.00061 11C4.00061 10.2045 4.31656 9.44158 4.87897 8.879L12 1.758L19.121 8.879C19.6834 9.44158 19.9993 10.2045 19.9993 11C19.9993 11.7955 19.6834 12.5584 19.121 13.121C18.027 14.216 16.142 14.261 15 13.236V18C15 19.654 13.654 21 12 21ZM11 8.414V18C11.0115 18.2575 11.1219 18.5006 11.3082 18.6787C11.4944 18.8569 11.7422 18.9563 12 18.9563C12.2577 18.9563 12.5055 18.8569 12.6918 18.6787C12.8781 18.5006 12.9885 18.2575 13 18V8.414L16.293 11.707C16.4833 11.889 16.7366 11.9906 17 11.9906C17.2634 11.9906 17.5166 11.889 17.707 11.707C17.8944 11.5195 17.9998 11.2652 17.9998 11C17.9998 10.7348 17.8944 10.4805 17.707 10.293L12 4.586L6.29297 10.293C6.1055 10.4805 6.00018 10.7348 6.00018 11C6.00018 11.2652 6.1055 11.5195 6.29297 11.707C6.48334 11.889 6.73658 11.9906 6.99997 11.9906C7.26336 11.9906 7.5166 11.889 7.70697 11.707L11 8.414Z" fill="white"/>
+                                    </svg>
+                                    <span class="number-of-upvotes">73</span>
+                                </div>
+                            </footer>
+                        </article>
+                    </a>
+                </li>
+            </ul>
+        </section>
     </main>
 
     <footer role="contentinfo" class="page-footer">
-        <nav class="page-footer-nav">
+        <nav class="footer-nav">
             <ul class="page-footer-list">
                 <li>
                     <a href="#">Terms of service</a>

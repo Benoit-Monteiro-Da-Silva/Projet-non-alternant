@@ -10,20 +10,10 @@ html {
   font-size: 10px;
 }
 
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-figure,
-blockquote,
-dl,
-dd {
+/* Remove default margin and padding */
+* {
   margin: 0;
+  padding: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -31,11 +21,11 @@ dd {
   list-style: none;
 }
 
-/* Remove default padding */
+/* Remove default padding and margin */
 :where(ul[class], ol[class]) {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
 /* Set core root defaults */
 html:focus-within {
@@ -56,7 +46,8 @@ a:not([class]) {
 
 /* Make images easier to work with */
 img,
-picture {
+picture,
+svg {
   max-width: 100%;
   display: block;
 }

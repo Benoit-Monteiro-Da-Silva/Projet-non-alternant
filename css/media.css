@@ -1,89 +1,142 @@
 @media only screen and (min-width: 768px) {
 
-    /*Variables*/
-
-    :root {
-        --header-content-height: 5rem;
-        --search-button-width: 6rem;
-    }
-
-
     /*Header*/
-
-    .search-bar, .connexion-button-text {
+    .search-bar, .connexion-button-text, .logo-title {
         display: block;
     }
-    
+
+    .page-header {
+        padding: .8rem clamp(1.6rem, 0.686rem + 1.19vw, 2.4rem);
+        background-color: var(--main-background-color);
+    }
+
     .header-nav {
         justify-content: space-between;
-        position: relative;
     }
-    
+
     .logo {
-        height: var(--header-content-height);
-        width: var(--header-content-height);
-    }
-    
-    form {
+        margin-right: unset;
+        font-family: 'ADLaM Display';
+        font-weight: 400;
+        font-size: 2rem;
         display: flex;
+        align-items: center;
+        gap: 1.6rem;
+
+        img {
+            max-width: 4rem;
+        }
+    }
+
+    form {
+        max-height: 4.2rem;
+        max-width: 57.3rem;
+        flex-grow: 1;
         border: 1px solid #B1AFAF;
         border-radius: 2.5rem;
-        height: var(--header-content-height);
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+        display: flex;
 
-    .search-bar {
-        background-color: initial;
-        border: none;
-    }
+        .search-bar {
+            flex-grow: 1;
+            background-color: inherit;
+            border: none;
+            padding: 1rem 2.4rem;
+            color: white;
 
-    .search-bar::placeholder {
-        text-align: center;
-    }
+            &:focus {
+                outline: none;
+            }
+        }
 
-    .search-button {
-        background-color: var(--second-color);
-        border-radius: 0 2.5rem 2.5rem 0;
-        width: var(--search-button-width);
+        .search-button {
+            margin-left: auto;
+            background-color: var(--secondary-color);
+            border-radius: 0 2.5rem 2.5rem 0;
+            padding: 0 1.5rem;
+            cursor: pointer;
+        }
     }
 
     .connexion-button {
         display: flex;
+        align-items: center;
         gap: .8rem;
         padding: .8rem;
+        color: white;
+        font-weight: 600;
+        font-size: 1.6rem;
         border: 1px solid #B1AFAF;
         border-radius: 2rem;
+
+        .connexion-button-icon {
+            width: 2.4rem;
+        }
+
+        &:hover {
+            background-color: var(--secondary-color);
+            cursor: pointer;
+        }
     }
 
-    .connexion-button-text {
-        color: white;
-        font-size: 1.6rem;
-        font-weight: 600;
+
+    /*Main*/
+
+    .section-hero {
+        padding-top: 15.1rem;
+        margin-bottom: 4rem;
     }
 
+    h1 {
+        display:none;
+    }
 
-    /*Filters*/
+    h2 {
+        font-size: 3.2rem;
+    }
 
+    .filters-list {
+        position: fixed;
+        top: 5.8rem;
+        margin: 0;
+        padding-block: 1.6rem;
+        padding-left: 6.4rem;
+        background-color: var(--main-background-color);
+        width: 100%;
 
-    /*Articles*/
+        button {
+            border-radius: 1rem;
+            font-size: 1.4rem;
+            cursor: pointer;
+
+            &.filter-inactive:hover {
+                background-color: #5D5B5B;
+            }
+        }
+    }
+
+    .section-articles {
+        margin-inline: clamp(1.6rem, -13.257rem + 19.345vw, 14.6rem);
+    }
 
     .articles-list {
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 35.6rem);
         justify-content: center;
-    }
 
-    .articles-list li {
-        max-width: 37rem;
+        .article-card:hover {
+            outline: 1px solid rgb(167, 162, 162);
+        }
     }
-
+    
 
     /*Footer*/
 
     .page-footer-list {
         flex-direction: row;
         justify-content: space-evenly;
+
+        a:hover {
+            text-decoration: none;
+        }
     }
 }
