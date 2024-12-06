@@ -1,12 +1,21 @@
 @media only screen and (min-width: 768px) {
 
+    /*Variables*/
+
+    :root {
+        --header-padding-block: 1.2rem;
+        --header-height-content: 4.2rem;
+        --hover-color: #5D5B5B;;
+    }
+
     /*Header*/
-    .search-bar, .connexion-button-text, .logo-title {
-        display: block;
+
+    .big-screen-only {
+        display: unset;
     }
 
     .page-header {
-        padding: .8rem clamp(1.6rem, 0.686rem + 1.19vw, 2.4rem);
+        padding: var(--header-padding-block) clamp(1.6rem, 0.686rem + 1.19vw, 2.4rem);
         background-color: var(--main-background-color);
     }
 
@@ -22,14 +31,10 @@
         display: flex;
         align-items: center;
         gap: 1.6rem;
-
-        img {
-            max-width: 4rem;
-        }
     }
 
     form {
-        max-height: 4.2rem;
+        max-height: var(--header-height-content);
         max-width: 57.3rem;
         flex-grow: 1;
         border: 1px solid #B1AFAF;
@@ -54,6 +59,10 @@
             border-radius: 0 2.5rem 2.5rem 0;
             padding: 0 1.5rem;
             cursor: pointer;
+
+            svg {
+                width: 2.4rem;
+            }
         }
     }
 
@@ -79,40 +88,64 @@
     }
 
 
-    /*Main*/
+    /*Section-hero*/
 
     .section-hero {
-        padding-top: 15.1rem;
+        padding-top: 15.5rem;
         margin-bottom: 4rem;
     }
 
     h1 {
-        display:none;
+        display: none;
     }
 
     h2 {
         font-size: 3.2rem;
     }
 
-    .filters-list {
+    .filters {
         position: fixed;
-        top: 5.8rem;
-        margin: 0;
-        padding-block: 1.6rem;
-        padding-left: 6.4rem;
-        background-color: var(--main-background-color);
+        top: calc(var(--header-padding-block) * 2 + var(--header-height-content));
         width: 100%;
+        margin: 0;
+        padding: 1.2rem 2.4rem;
+        background-color: var(--main-background-color);
+        display: flex;
+        justify-content: center;
+        gap: 3.2rem;
+    }
 
-        button {
-            border-radius: 1rem;
-            font-size: 1.4rem;
-            cursor: pointer;
+    .arrow-button {
+        border: none;
+        border-radius: 50%;
+        background-color: inherit;
+        flex-basis: 3.7rem;
+        flex-shrink: 0;
+        color: white;
+        font-size: 2.4rem;
+        transition: transform 0.2s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-            &.filter-inactive:hover {
-                background-color: #5D5B5B;
-            }
+        &:hover {
+            background-color: var(--hover-color);
+            transform: scale(1.2);
         }
     }
+
+    .filter-active, .filter-inactive {
+        border-radius: 1rem;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+
+    .filter-inactive:hover {
+        background-color: var(--hover-color);
+    }
+
+
+    /*Section-articles*/
 
     .section-articles {
         margin-inline: clamp(1.6rem, -13.257rem + 19.345vw, 14.6rem);

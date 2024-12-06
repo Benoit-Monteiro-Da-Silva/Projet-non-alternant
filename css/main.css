@@ -51,6 +51,7 @@
 
 
 /*General rules*/
+
 body {
   background-color: var(--main-background-color);
   color: white;
@@ -80,12 +81,12 @@ h3 {
   font-size: 2rem;
 }
 
-
-/*Header*/
-
-.search-bar, .connexion-button-text {
+.big-screen-only {
   display: none;
 }
+
+
+/*Header*/
 
 .page-header {
   position: fixed;
@@ -106,10 +107,6 @@ h3 {
   img {
     max-width: var(--mobile-header-icon-size)
   }
-}
-
-.logo-title {
-  display: none;
 }
 
 form {
@@ -140,26 +137,30 @@ form {
   margin-bottom: 4rem;
 }
 
+.filters {
+  margin: 4.8rem 0 0 var(--mobile-padding-inline);
+}
+
 .filters-list {
   display: flex;
   gap: 1.2rem;
-  margin: 4.8rem 0 0 var(--mobile-padding-inline);
+  overflow: hidden;
+}
 
-  button {
-    border-radius: 2rem;
-    border: none;
-    padding: .8rem 1.6rem;
+.filter-active, .filter-inactive {
+  border-radius: 2rem;
+  border: none;
+  padding: .8rem 1.6rem;
+}
 
-    &.filter-active {
-      background-color: white;
-      color: black;
-    }
+.filter-active {
+  background-color: white;
+  color: black;
+}
 
-    &.filter-inactive {
-      background-color: var(--secondary-color);
-      color: white;
-    }
-  }
+.filter-inactive {
+  background-color: var(--secondary-color);
+  color: white;
 }
 
 
