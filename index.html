@@ -6,7 +6,7 @@
     <title>Code-Sharing</title>
 
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
                 <span class="logo-title big-screen-only">Code-Sharing</span>
             </a>
 
-            <form action="#" method="get">
+            <form action="#" method="get" class="search-form">
                 <input type="search" placeholder="Search" class="search-bar big-screen-only">
                 <button class="search-button">
                     <span class="sr-only">Search</span>
@@ -30,15 +30,67 @@
 
             <button class="connexion-button">
                 <div class="connexion-button-icon">
-                    <span class="sr-only">Connexion</span>
+                    <span class="sr-only">Account</span>
                     <svg aria-hidden="true" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9444 10.5556C11.9444 9.08213 12.5298 7.66905 13.5716 6.62718C14.6135 5.58532 16.0266 5 17.5 5C18.9734 5 20.3865 5.58532 21.4284 6.62718C22.4702 7.66905 23.0556 9.08213 23.0556 10.5556C23.0556 12.029 22.4702 13.4421 21.4284 14.4839C20.3865 15.5258 18.9734 16.1111 17.5 16.1111C16.0266 16.1111 14.6135 15.5258 13.5716 14.4839C12.5298 13.4421 11.9444 12.029 11.9444 10.5556ZM11.9444 18.8889C10.1027 18.8889 8.33632 19.6205 7.03398 20.9229C5.73164 22.2252 5 23.9916 5 25.8333C5 26.9384 5.43899 27.9982 6.22039 28.7796C7.00179 29.561 8.0616 30 9.16667 30H25.8333C26.9384 30 27.9982 29.561 28.7796 28.7796C29.561 27.9982 30 26.9384 30 25.8333C30 23.9916 29.2684 22.2252 27.966 20.9229C26.6637 19.6205 24.8973 18.8889 23.0556 18.8889H11.9444Z"/>
                     </svg>
                 </div>
-                <span class="connexion-button-text big-screen-only" aria-hidden="true">Connexion</span>
+                <span class="connexion-button-text big-screen-only" aria-hidden="true">Account</span>
             </button>
         </nav>
     </header>
+
+    <div class="connexion-modal full-screen-modal">
+        <div class="connexion-modal-container">
+            <form action="#" method="get" class="connexion-form">
+                <div class="user-name-group">
+                    <label for="user-name">User name</label>
+                    <input type="text" placeholder="User name" id="user-name" name="user-name">
+                </div>
+                <div class="password-group">
+                    <label for="password">Password</label>
+                    <input type="text" placeholder="Password" id="password" name="password">
+                    <div class="see-password-group">
+                        <input type="checkbox" id="see-password-checkbox">
+                        <label for="see-password-checkbox">See password</label>
+                    </div>
+                    <a href="#">I forgot my password</a>
+                </div>
+                <div class="remember-me-group">
+                    <input type="checkbox" id="remember-me-checkbox" name="Remembered" value="is-remembered">
+                    <label for="remember-me-checkbox">Remember me</label>
+                </div>
+                <button class="log-in-button">Log-in</button>
+            </form>
+            <button class="create-account-button">Create New Account</button>
+            <button class="close-modal-button" id="close-connexion-modal-button">
+                <span class="sr-only">Close modal</span>
+                <svg aria-hidden="true" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="14.0962" y1="14.0962" x2="4.90377" y2="4.90384" stroke="black"/>
+                    <line x1="4.90377" y1="14.0962" x2="14.0962" y2="4.90377" stroke="black"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="search-modal full-screen-modal">
+        <form action="#" method="get" class="search-modal-form">
+            <input type="search" placeholder="Search">
+            <button class="modal-search-button">
+                <span class="sr-only">Search</span>
+                <svg aria-hidden="true" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M27.3155 23.4209L22.8495 18.6698L19.4144 17.1601C20.5582 15.4297 21.171 13.3654 21.1688 11.25C21.1688 5.56365 16.8202 0.9375 11.475 0.9375C6.12983 0.9375 1.78125 5.56365 1.78125 11.25C1.78125 16.9363 6.12983 21.5625 11.475 21.5625C13.4807 21.5649 15.4373 20.9018 17.072 19.6654L18.4875 23.3099L22.9533 28.0612C23.2397 28.3659 23.5797 28.6076 23.9539 28.7725C24.3281 28.9374 24.7292 29.0223 25.1343 29.0223C25.5393 29.0224 25.9404 28.9375 26.3146 28.7726C26.6889 28.6077 27.0289 28.366 27.3153 28.0613C27.6018 27.7566 27.829 27.3949 27.984 26.9968C28.139 26.5987 28.2188 26.172 28.2188 25.7411C28.2188 25.3102 28.1391 24.8835 27.9841 24.4854C27.8291 24.0873 27.6019 23.7256 27.3155 23.4209ZM3.54375 11.25C3.54375 6.59766 7.1018 2.8125 11.475 2.8125C15.8482 2.8125 19.4063 6.59766 19.4063 11.25C19.4063 15.9023 15.8482 19.6875 11.475 19.6875C7.1018 19.6875 3.54375 15.9023 3.54375 11.25ZM26.0691 26.7354C25.821 26.9987 25.4848 27.1466 25.1344 27.1466C24.7839 27.1466 24.4478 26.9987 24.1996 26.7354L19.9822 22.2487L18.6662 18.86L21.8517 20.26L26.0692 24.7467C26.3167 25.0106 26.4557 25.3682 26.4556 25.741C26.4556 26.1139 26.3166 26.4715 26.0691 26.7354Z" fill="white"/>
+                </svg>
+            </button>
+        </form>
+        <button class="close-modal-button" id="close-search-modal-button">
+            <span class="sr-only">Close modal</span>
+            <svg aria-hidden="true" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                <line x1="14.0962" y1="14.0962" x2="4.90377" y2="4.90384" stroke="black"/>
+                <line x1="4.90377" y1="14.0962" x2="14.0962" y2="4.90377" stroke="black"/>
+            </svg>
+        </button>
+    </div>
 
     <main role="main">
         <section class="section-hero">
@@ -53,22 +105,22 @@
                     </svg>
                 </button>
                 <ul class="filters-list">
-                    <li><button class="filter-active">Most&nbsprecent</button></li>
-                    <li><button class="filter-inactive">Most&nbsprecommended</button></li>
-                    <li><button class="filter-inactive">HTML</button></li>
-                    <li><button class="filter-inactive">CSS</button></li>
-                    <li><button class="filter-inactive">Javascript</button></li>
-                    <li><button class="filter-inactive">Design</button></li>
-                    <li><button class="filter-inactive">Cybersecurity</button></li>
-                    <li><button class="filter-inactive">AI</button></li>
-                    <li><button class="filter-inactive">PHP</button></li>
-                    <li><button class="filter-inactive">Symphony</button></li>
-                    <li><button class="filter-inactive">React</button></li>
-                    <li><button class="filter-inactive">Python</button></li>
-                    <li><button class="filter-inactive">C&nbsp/&nbspC++</button></li>
-                    <li><button class="filter-inactive">Angular</button></li>
-                    <li><button class="filter-inactive">Java</button></li>
-                    <li><button class="filter-inactive">Ruby</button></li>
+                    <li><button class="filter-active filter">Most&nbsprecent</button></li>
+                    <li><button class="filter">Most&nbsprecommended</button></li>
+                    <li><button class="filter">HTML</button></li>
+                    <li><button class="filter">CSS</button></li>
+                    <li><button class="filter">Javascript</button></li>
+                    <li><button class="filter">Design</button></li>
+                    <li><button class="filter">Cybersecurity</button></li>
+                    <li><button class="filter">AI</button></li>
+                    <li><button class="filter">PHP</button></li>
+                    <li><button class="filter">Symphony</button></li>
+                    <li><button class="filter">React</button></li>
+                    <li><button class="filter">Python</button></li>
+                    <li><button class="filter">C&nbsp/&nbspC++</button></li>
+                    <li><button class="filter">Angular</button></li>
+                    <li><button class="filter">Java</button></li>
+                    <li><button class="filter">Ruby</button></li>
                 </ul>
                 <button class="arrow-button big-screen-only">
                     <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -325,5 +377,6 @@
         </nav>
     </footer>
     
+<script src="script.js"></script>
 </body>
 </html>

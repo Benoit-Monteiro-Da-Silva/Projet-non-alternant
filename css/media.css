@@ -33,7 +33,7 @@
         gap: 1.6rem;
     }
 
-    form {
+    .search-form {
         max-height: var(--header-height-content);
         max-width: 57.3rem;
         flex-grow: 1;
@@ -115,6 +115,11 @@
         gap: 3.2rem;
     }
 
+    .filters-list li:first-child, .filters-list li:last-child {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .arrow-button {
         border: none;
         border-radius: 50%;
@@ -134,13 +139,13 @@
         }
     }
 
-    .filter-active, .filter-inactive {
+    .filter {
         border-radius: 1rem;
         font-size: 1.4rem;
         cursor: pointer;
     }
 
-    .filter-inactive:hover {
+    .filter:hover:not(.filter-active) {
         background-color: var(--hover-color);
     }
 
