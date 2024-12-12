@@ -299,6 +299,9 @@ h3 {
   border: none;
   border-radius: 50%;
   padding: .5rem;
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
   
   svg {
     width: 2.4rem;
@@ -316,7 +319,6 @@ h3 {
 .connexion-modal-container {
   flex-grow: 1;
   max-width: 30rem;
-  position: relative;
 
   input[type=text], button {
     display: block;
@@ -406,23 +408,13 @@ h3 {
   background-color: #BBBCFD;
 }
 
-#close-connexion-modal-button {
-  position: absolute;
-  top: -1.8rem;
-  right: 0;
-}
-
 /*Search-modal*/
 
-.search-modal {
-  text-align: center;
-
-  .search-modal-form {
-    display: flex;
-    border-radius: 2.5rem;
-    overflow: hidden;
-    margin-bottom: 6rem;
-  }
+.search-modal-form {
+  display: flex;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  margin-top: 4rem;
 
   input, .modal-search-button {
     background-color: var(--secondary-color);
