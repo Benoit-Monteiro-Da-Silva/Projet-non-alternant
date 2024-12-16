@@ -175,7 +175,7 @@
         cursor: pointer;
     }
 
-    .filter:hover:not(.filter-active) {
+    .filter:hover:not(.button-active) {
         background-color: var(--hover-color);
     }
 

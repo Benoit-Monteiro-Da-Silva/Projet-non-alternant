@@ -7,7 +7,7 @@ const closeConnexionModalButton = document.querySelector("#close-connexion-modal
 const closeSearchModalButton = document.querySelector("#close-search-modal-button")
 const filtersListContainer = document.querySelector('.filters-list-container')
 const filtersList = document.querySelector('.filters-list')
-const filters = document.querySelectorAll('.filters-list button')
+const toggleButtons = document.querySelectorAll('.toggle')
 const arrowButtons = document.querySelectorAll('.arrow-button')
 
 const searchModalToggle = (e) => {
@@ -27,13 +27,11 @@ const connexionModalToggle = () => {
     }
 }
 
-const filterToggle = (e) => {
-    filters.forEach((button) => {
-        if (button.classList.contains('filter-active')) {
-            button.classList.remove('filter-active')
-        }
+const toggleButton = (e) => {
+    toggleButtons.forEach((button) => {
+        button.classList.remove('button-active')
     })
-    e.target.classList.add('filter-active')
+    e.currentTarget.classList.add('button-active')
 }
 
 const filtersScrollLeft = () => {
@@ -62,11 +60,10 @@ const filtersScrollRight = () => {
     }
 }
 
-connexionButton.addEventListener("click", connexionModalToggle)
-searchButton.addEventListener("click", searchModalToggle)
-closeSearchModalButton.addEventListener("click", searchModalToggle)
-closeConnexionModalButton.addEventListener("click", connexionModalToggle)
-
-filters.forEach(filter => filter.addEventListener("click", filterToggle))
-arrowButtons[0].addEventListener("click", filtersScrollLeft)
-arrowButtons[1].addEventListener("click", filtersScrollRight)
+if (toggleButtons) {toggleButtons.forEach(button => button.addEventListener("click", toggleButton))}
+if (connexionButton) {connexionButton.addEventListener("click", connexionModalToggle)}
+if (searchButton) {searchButton.addEventListener("click", searchModalToggle)}
+if (closeSearchModalButton) {closeSearchModalButton.addEventListener("click", searchModalToggle)}
+if (closeConnexionModalButton) {closeConnexionModalButton.addEventListener("click", connexionModalToggle)}
+if (arrowButtons[0]) {arrowButtons[0].addEventListener("click", filtersScrollLeft)}
+if (arrowButtons[1]) {arrowButtons[1].addEventListener("click", filtersScrollRight)}
