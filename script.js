@@ -7,8 +7,9 @@ const closeConnexionModalButton = document.querySelector("#close-connexion-modal
 const closeSearchModalButton = document.querySelector("#close-search-modal-button")
 const filtersListContainer = document.querySelector('.filters-list-container')
 const filtersList = document.querySelector('.filters-list')
-const toggleButtons = document.querySelectorAll('.toggle')
+const toggleFilters = document.querySelectorAll('.toggle-filter')
 const arrowButtons = document.querySelectorAll('.arrow-button')
+const articleButtons = document.querySelectorAll('.article-button')
 
 const searchModalToggle = (e) => {
     e.preventDefault()
@@ -27,8 +28,8 @@ const connexionModalToggle = () => {
     }
 }
 
-const toggleButton = (e) => {
-    toggleButtons.forEach((button) => {
+const toggleFilter = (e) => {
+    toggleFilters.forEach((button) => {
         button.classList.remove('button-active')
     })
     e.currentTarget.classList.add('button-active')
@@ -60,10 +61,18 @@ const filtersScrollRight = () => {
     }
 }
 
-if (toggleButtons) {toggleButtons.forEach(button => button.addEventListener("click", toggleButton))}
+const toggleButton = (e) => {
+    articleButtons.forEach((button) => {
+        button.classList.remove('button-active')
+    })
+    e.currentTarget.classList.add('button-active')
+}
+
+if (toggleFilters) {toggleFilters.forEach(button => button.addEventListener("click", toggleFilter))}
 if (connexionButton) {connexionButton.addEventListener("click", connexionModalToggle)}
 if (searchButton) {searchButton.addEventListener("click", searchModalToggle)}
 if (closeSearchModalButton) {closeSearchModalButton.addEventListener("click", searchModalToggle)}
 if (closeConnexionModalButton) {closeConnexionModalButton.addEventListener("click", connexionModalToggle)}
 if (arrowButtons[0]) {arrowButtons[0].addEventListener("click", filtersScrollLeft)}
 if (arrowButtons[1]) {arrowButtons[1].addEventListener("click", filtersScrollRight)}
+if (articleButtons) {articleButtons.forEach(button => button.addEventListener("click", toggleButton))}
