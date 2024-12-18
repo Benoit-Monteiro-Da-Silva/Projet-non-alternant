@@ -10,6 +10,9 @@ const filtersList = document.querySelector('.filters-list')
 const toggleFilters = document.querySelectorAll('.toggle-filter')
 const arrowButtons = document.querySelectorAll('.arrow-button')
 const articleButtons = document.querySelectorAll('.article-button')
+const articleSection =  document.querySelector('.article')
+const commentsSection = document.querySelector('.comments')
+const suggestionsSection = document.querySelector('.suggestions')
 
 const searchModalToggle = (e) => {
     e.preventDefault()
@@ -66,6 +69,16 @@ const toggleButton = (e) => {
         button.classList.remove('button-active')
     })
     e.currentTarget.classList.add('button-active')
+    articleSection.classList.remove('active-section')
+    commentsSection.classList.remove('active-section')
+    suggestionsSection.classList.remove('active-section')
+    if (e.currentTarget == articleButtons[0]) {
+        articleSection.classList.add('active-section')
+    } else if (e.currentTarget == articleButtons[1]) {
+        commentsSection.classList.add('active-section')
+    } else if (e.currentTarget ==  articleButtons[2]) {
+        suggestionsSection.classList.add('active-section')
+    }
 }
 
 if (toggleFilters) {toggleFilters.forEach(button => button.addEventListener("click", toggleFilter))}

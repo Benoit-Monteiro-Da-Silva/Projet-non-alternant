@@ -6,6 +6,7 @@
     <title>Code-Sharing</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 <body class="article-body">
 
@@ -38,66 +39,123 @@
         </nav>
     </header>
 
+    <div class="connexion-modal modal">
+        <div class="connexion-modal-container">
+            <form action="#" method="get" class="connexion-form">
+                <div class="user-name-group">
+                    <label for="user-name">User name</label>
+                    <input type="text" placeholder="User name" id="user-name" name="user-name">
+                </div>
+                <div class="password-group">
+                    <label for="password">Password</label>
+                    <input type="text" placeholder="Password" id="password" name="password">
+                    <div class="see-password-group">
+                        <input type="checkbox" id="see-password-checkbox">
+                        <label for="see-password-checkbox">See password</label>
+                    </div>
+                    <a href="#">I forgot my password</a>
+                </div>
+                <div class="remember-me-group">
+                    <input type="checkbox" id="remember-me-checkbox" name="Remembered" value="is-remembered">
+                    <label for="remember-me-checkbox">Remember me</label>
+                </div>
+                <button class="log-in-button">Log-in</button>
+            </form>
+            <button class="create-account-button">Create New Account</button>
+            <button class="close-modal-button" id="close-connexion-modal-button">
+                <span class="sr-only">Close modal</span>
+                <svg aria-hidden="true" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="14.0962" y1="14.0962" x2="4.90377" y2="4.90384" stroke="black"/>
+                    <line x1="4.90377" y1="14.0962" x2="14.0962" y2="4.90377" stroke="black"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="search-modal modal">
+        <form action="#" method="get" class="search-modal-form">
+            <input type="search" placeholder="Search">
+            <button class="modal-search-button">
+                <span class="sr-only">Search</span>
+                <svg aria-hidden="true" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M27.3155 23.4209L22.8495 18.6698L19.4144 17.1601C20.5582 15.4297 21.171 13.3654 21.1688 11.25C21.1688 5.56365 16.8202 0.9375 11.475 0.9375C6.12983 0.9375 1.78125 5.56365 1.78125 11.25C1.78125 16.9363 6.12983 21.5625 11.475 21.5625C13.4807 21.5649 15.4373 20.9018 17.072 19.6654L18.4875 23.3099L22.9533 28.0612C23.2397 28.3659 23.5797 28.6076 23.9539 28.7725C24.3281 28.9374 24.7292 29.0223 25.1343 29.0223C25.5393 29.0224 25.9404 28.9375 26.3146 28.7726C26.6889 28.6077 27.0289 28.366 27.3153 28.0613C27.6018 27.7566 27.829 27.3949 27.984 26.9968C28.139 26.5987 28.2188 26.172 28.2188 25.7411C28.2188 25.3102 28.1391 24.8835 27.9841 24.4854C27.8291 24.0873 27.6019 23.7256 27.3155 23.4209ZM3.54375 11.25C3.54375 6.59766 7.1018 2.8125 11.475 2.8125C15.8482 2.8125 19.4063 6.59766 19.4063 11.25C19.4063 15.9023 15.8482 19.6875 11.475 19.6875C7.1018 19.6875 3.54375 15.9023 3.54375 11.25ZM26.0691 26.7354C25.821 26.9987 25.4848 27.1466 25.1344 27.1466C24.7839 27.1466 24.4478 26.9987 24.1996 26.7354L19.9822 22.2487L18.6662 18.86L21.8517 20.26L26.0692 24.7467C26.3167 25.0106 26.4557 25.3682 26.4556 25.741C26.4556 26.1139 26.3166 26.4715 26.0691 26.7354Z" fill="white"/>
+                </svg>
+            </button>
+        </form>
+        <button class="close-modal-button" id="close-search-modal-button">
+            <span class="sr-only">Close modal</span>
+            <svg aria-hidden="true" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                <line x1="14.0962" y1="14.0962" x2="4.90377" y2="4.90384" stroke="black"/>
+                <line x1="4.90377" y1="14.0962" x2="14.0962" y2="4.90377" stroke="black"/>
+            </svg>
+        </button>
+    </div>
+
     <main role="main">
-        <section class="article-hero">
-            <ul class="article-tags-list">
-                <li>#Tag</li>
-                <li>#Tag</li>
-                <li>#Tag</li>
-            </ul>
-            <h2>Tips on how to optimize your code</h2>
-            <div class="article-author">
-                <div class="author-picture"><img src="img/user-picture-2.png" alt=""></div>
-                <span class="author-name">Justine D.</span>
-            </div>
-            <div class="article-infos">
-                <time datetime="2020-07-13">Jul 13, 2023</time>
-                <div class="article-upvotes">
-                    <span class="sr-only">number of upvotes</span>
-                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 21C10.346 21 8.99997 19.654 8.99997 18V13.236C7.85697 14.26 5.97497 14.215 4.87897 13.121C4.31656 12.5584 4.00061 11.7955 4.00061 11C4.00061 10.2045 4.31656 9.44158 4.87897 8.879L12 1.758L19.121 8.879C19.6834 9.44158 19.9993 10.2045 19.9993 11C19.9993 11.7955 19.6834 12.5584 19.121 13.121C18.027 14.216 16.142 14.261 15 13.236V18C15 19.654 13.654 21 12 21ZM11 8.414V18C11.0115 18.2575 11.1219 18.5006 11.3082 18.6787C11.4944 18.8569 11.7422 18.9563 12 18.9563C12.2577 18.9563 12.5055 18.8569 12.6918 18.6787C12.8781 18.5006 12.9885 18.2575 13 18V8.414L16.293 11.707C16.4833 11.889 16.7366 11.9906 17 11.9906C17.2634 11.9906 17.5166 11.889 17.707 11.707C17.8944 11.5195 17.9998 11.2652 17.9998 11C17.9998 10.7348 17.8944 10.4805 17.707 10.293L12 4.586L6.29297 10.293C6.1055 10.4805 6.00018 10.7348 6.00018 11C6.00018 11.2652 6.1055 11.5195 6.29297 11.707C6.48334 11.889 6.73658 11.9906 6.99997 11.9906C7.26336 11.9906 7.5166 11.889 7.70697 11.707L11 8.414Z" fill="white"/>
-                    </svg>
-                    <span class="number-of-upvotes">73</span>
+        <section class="full-article">
+
+            <div class="article-hero">
+                <ul class="article-tags-list">
+                    <li>#Tag</li>
+                    <li>#Tag</li>
+                    <li>#Tag</li>
+                </ul>
+                <h2>Tips on how to optimize your code</h2>
+                <div class="article-author">
+                    <div class="author-picture"><img src="img/user-picture-2.png" alt=""></div>
+                    <span class="author-name">Justine D.</span>
+                </div>
+                <div class="article-infos">
+                    <time datetime="2020-07-13">Jul 13, 2023</time>
+                    <div class="article-upvotes">
+                        <span class="sr-only">number of upvotes</span>
+                        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21C10.346 21 8.99997 19.654 8.99997 18V13.236C7.85697 14.26 5.97497 14.215 4.87897 13.121C4.31656 12.5584 4.00061 11.7955 4.00061 11C4.00061 10.2045 4.31656 9.44158 4.87897 8.879L12 1.758L19.121 8.879C19.6834 9.44158 19.9993 10.2045 19.9993 11C19.9993 11.7955 19.6834 12.5584 19.121 13.121C18.027 14.216 16.142 14.261 15 13.236V18C15 19.654 13.654 21 12 21ZM11 8.414V18C11.0115 18.2575 11.1219 18.5006 11.3082 18.6787C11.4944 18.8569 11.7422 18.9563 12 18.9563C12.2577 18.9563 12.5055 18.8569 12.6918 18.6787C12.8781 18.5006 12.9885 18.2575 13 18V8.414L16.293 11.707C16.4833 11.889 16.7366 11.9906 17 11.9906C17.2634 11.9906 17.5166 11.889 17.707 11.707C17.8944 11.5195 17.9998 11.2652 17.9998 11C17.9998 10.7348 17.8944 10.4805 17.707 10.293L12 4.586L6.29297 10.293C6.1055 10.4805 6.00018 10.7348 6.00018 11C6.00018 11.2652 6.1055 11.5195 6.29297 11.707C6.48334 11.889 6.73658 11.9906 6.99997 11.9906C7.26336 11.9906 7.5166 11.889 7.70697 11.707L11 8.414Z" fill="white"/>
+                        </svg>
+                        <span class="number-of-upvotes">73</span>
+                    </div>
                 </div>
             </div>
+    
+            <nav class="article-nav-buttons">
+                <button class="article-button button-active">
+                    <svg aria-hidden="true" width="19" height="18" viewBox="0 0 19 18" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.5 2C18.5 0.897 17.603 0 16.5 0H2.5C1.397 0 0.5 0.897 0.5 2V16C0.5 17.103 1.397 18 2.5 18H16.5C17.603 18 18.5 17.103 18.5 16V2ZM2.5 16V2H16.5L16.502 16H2.5Z"/>
+                        <path d="M4.5 4H6.498V6H4.5V4ZM8.5 4H14.5V6H8.5V4ZM4.5 8H6.498V10H4.5V8ZM8.5 8H14.5V10H8.5V8ZM4.5 12H6.498V14H4.5V12ZM8.5 12H14.5V14H8.5V12Z"/>
+                    </svg>
+                    <span>Article</span>
+                </button>
+                <button class="article-button">
+                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.6803 4C21.6803 2.9 20.8028 2 19.7183 2H3.94363C2.85913 2 1.9718 2.9 1.9718 4V16C1.9718 17.1 2.85913 18 3.94363 18H17.7464L21.6901 22L21.6803 4ZM19.7183 4V17.17L18.5648 16H3.94363V4H19.7183ZM5.91546 12H17.7464V14H5.91546V12ZM5.91546 9H17.7464V11H5.91546V9ZM5.91546 6H17.7464V8H5.91546V6Z"/>
+                    </svg>
+                    <span class="sr-only">Comments</span>
+                    <span>(21)</span>
+                </button>
+                <button class="article-button">
+                    <svg aria-hidden="true" width="21" height="20" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.83331 15L9.03331 8.2L15.8333 5L12.6333 11.8L5.83331 15ZM10.8333 9.1C10.5946 9.1 10.3657 9.19482 10.1969 9.3636C10.0281 9.53239 9.93331 9.76131 9.93331 10C9.93331 10.2387 10.0281 10.4676 10.1969 10.6364C10.3657 10.8052 10.5946 10.9 10.8333 10.9C11.072 10.9 11.3009 10.8052 11.4697 10.6364C11.6385 10.4676 11.7333 10.2387 11.7333 10C11.7333 9.76131 11.6385 9.53239 11.4697 9.3636C11.3009 9.19482 11.072 9.1 10.8333 9.1ZM10.8333 0C12.1465 0 13.4469 0.258658 14.6601 0.761205C15.8734 1.26375 16.9758 2.00035 17.9044 2.92893C18.833 3.85752 19.5696 4.95991 20.0721 6.17317C20.5747 7.38642 20.8333 8.68678 20.8333 10C20.8333 12.6522 19.7797 15.1957 17.9044 17.0711C16.029 18.9464 13.4855 20 10.8333 20C9.52009 20 8.21973 19.7413 7.00648 19.2388C5.79322 18.7362 4.69083 17.9997 3.76225 17.0711C1.88688 15.1957 0.833313 12.6522 0.833313 10C0.833313 7.34784 1.88688 4.8043 3.76225 2.92893C5.63761 1.05357 8.18115 0 10.8333 0ZM10.8333 2C8.71158 2 6.67675 2.84285 5.17646 4.34315C3.67617 5.84344 2.83331 7.87827 2.83331 10C2.83331 12.1217 3.67617 14.1566 5.17646 15.6569C6.67675 17.1571 8.71158 18 10.8333 18C12.955 18 14.9899 17.1571 16.4902 15.6569C17.9905 14.1566 18.8333 12.1217 18.8333 10C18.8333 7.87827 17.9905 5.84344 16.4902 4.34315C14.9899 2.84285 12.955 2 10.8333 2Z"/>
+                    </svg>
+                    <span class="sr-only">Similar articles</span>  
+                </button>
+            </nav>
+    
+            <article class="article active-section">
+                <div class="article-image">
+                    <img src="img/article-main-image-1.png" alt="">
+                </div>
+                <h3>Lorem ipsum dolor sit amet</h2>
+                <p>Consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</p>
+                <h3>Duis semper</h2>
+                <p>Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim.</p>
+                <h3>Pellentesque sed</h2>
+                <p>Dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.</p>
+            </article>
+
         </section>
 
-        <nav class="article-nav-buttons">
-            <button class="article-button button-active">
-                <svg aria-hidden="true" width="19" height="18" viewBox="0 0 19 18" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.5 2C18.5 0.897 17.603 0 16.5 0H2.5C1.397 0 0.5 0.897 0.5 2V16C0.5 17.103 1.397 18 2.5 18H16.5C17.603 18 18.5 17.103 18.5 16V2ZM2.5 16V2H16.5L16.502 16H2.5Z"/>
-                    <path d="M4.5 4H6.498V6H4.5V4ZM8.5 4H14.5V6H8.5V4ZM4.5 8H6.498V10H4.5V8ZM8.5 8H14.5V10H8.5V8ZM4.5 12H6.498V14H4.5V12ZM8.5 12H14.5V14H8.5V12Z"/>
-                </svg>
-                <span>Article</span>
-            </button>
-            <button class="article-button">
-                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21.6803 4C21.6803 2.9 20.8028 2 19.7183 2H3.94363C2.85913 2 1.9718 2.9 1.9718 4V16C1.9718 17.1 2.85913 18 3.94363 18H17.7464L21.6901 22L21.6803 4ZM19.7183 4V17.17L18.5648 16H3.94363V4H19.7183ZM5.91546 12H17.7464V14H5.91546V12ZM5.91546 9H17.7464V11H5.91546V9ZM5.91546 6H17.7464V8H5.91546V6Z"/>
-                </svg>
-                <span class="sr-only">Comments</span>
-                <span>(21)</span>
-            </button>
-            <button class="article-button">
-                <svg aria-hidden="true" width="21" height="20" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.83331 15L9.03331 8.2L15.8333 5L12.6333 11.8L5.83331 15ZM10.8333 9.1C10.5946 9.1 10.3657 9.19482 10.1969 9.3636C10.0281 9.53239 9.93331 9.76131 9.93331 10C9.93331 10.2387 10.0281 10.4676 10.1969 10.6364C10.3657 10.8052 10.5946 10.9 10.8333 10.9C11.072 10.9 11.3009 10.8052 11.4697 10.6364C11.6385 10.4676 11.7333 10.2387 11.7333 10C11.7333 9.76131 11.6385 9.53239 11.4697 9.3636C11.3009 9.19482 11.072 9.1 10.8333 9.1ZM10.8333 0C12.1465 0 13.4469 0.258658 14.6601 0.761205C15.8734 1.26375 16.9758 2.00035 17.9044 2.92893C18.833 3.85752 19.5696 4.95991 20.0721 6.17317C20.5747 7.38642 20.8333 8.68678 20.8333 10C20.8333 12.6522 19.7797 15.1957 17.9044 17.0711C16.029 18.9464 13.4855 20 10.8333 20C9.52009 20 8.21973 19.7413 7.00648 19.2388C5.79322 18.7362 4.69083 17.9997 3.76225 17.0711C1.88688 15.1957 0.833313 12.6522 0.833313 10C0.833313 7.34784 1.88688 4.8043 3.76225 2.92893C5.63761 1.05357 8.18115 0 10.8333 0ZM10.8333 2C8.71158 2 6.67675 2.84285 5.17646 4.34315C3.67617 5.84344 2.83331 7.87827 2.83331 10C2.83331 12.1217 3.67617 14.1566 5.17646 15.6569C6.67675 17.1571 8.71158 18 10.8333 18C12.955 18 14.9899 17.1571 16.4902 15.6569C17.9905 14.1566 18.8333 12.1217 18.8333 10C18.8333 7.87827 17.9905 5.84344 16.4902 4.34315C14.9899 2.84285 12.955 2 10.8333 2Z"/>
-                </svg>
-                <span class="sr-only">Similar articles</span>  
-            </button>
-        </nav>
-
-        <article class="article">
-            <div class="article-image">
-                <img src="img/article-main-image-1.png" alt="">
-            </div>
-            <h3>Lorem ipsum dolor sit amet</h2>
-            <p>Consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</p>
-            <h3>Duis semper</h2>
-            <p>Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim.</p>
-            <h3>Pellentesque sed</h2>
-            <p>Dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.</p>
-        </article>
-
         <section class="comments">
+            <h3>Comments <span>(4)</span></h3>
             <div class="comments-buttons-group">
                 <button class="button-active comments-filter toggle-filter">Most recent</button>
                 <button class="comments-filter toggle-filter">Most recommended</button>
@@ -171,145 +229,86 @@
         </section>
 
         <section class="suggestions">
+            <h3>Suggestions</h3>
             <ul class="suggestions-list">
                 <li class="suggestion-card card">
-                    <div class="suggestion-container">
-                        <div class="suggestion-image">
-                            <img src="img/article-picture-small-1.png" alt="">
-                        </div>
-                        <div class="suggestion-content">
-                            <h4>This is a bit long title</h4>
-                            <time datetime="2020-07-13">Jul 13, 2023</time>
-                        </div>
-                    </div>
-
-                    <footer class="article-footer">
-                        <div class="article-author">
-                            <div class="author-picture">
-                                <img src="img/user-picture.png" alt="">
+                    <a href="#">
+                        <div class="suggestion-container">
+                            <div class="suggestion-image">
+                                <img src="img/article-picture-small-1.png" alt="">
                             </div>
-                            <span class="author-name">Justine D.</span>
+                            <div class="suggestion-content">
+                                <h4>This is a bit long title</h4>
+                                <div class="article-author">
+                                    <div class="author-picture">
+                                        <img src="img/user-picture.png" alt="">
+                                    </div>
+                                    <span class="author-name">Justine D.</span>
+                                </div>
+                                <time datetime="2020-07-13">Jul 13, 2023</time>
+                            </div>
                         </div>
-                        <div class="article-comments">
-                            <span class="sr-only">number of comments</span>
-                            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.6803 4C21.6803 2.9 20.8028 2 19.7183 2H3.94363C2.85913 2 1.9718 2.9 1.9718 4V16C1.9718 17.1 2.85913 18 3.94363 18H17.7464L21.6901 22L21.6803 4ZM19.7183 4V17.17L18.5648 16H3.94363V4H19.7183ZM5.91546 12H17.7464V14H5.91546V12ZM5.91546 9H17.7464V11H5.91546V9ZM5.91546 6H17.7464V8H5.91546V6Z" fill="white"/>
-                            </svg>
-                            <span class="number-of-comments">21</span>
-                        </div>
-                        <div class="article-upvotes">
-                            <span class="sr-only">number of upvotes</span>
-                            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 21C10.346 21 8.99997 19.654 8.99997 18V13.236C7.85697 14.26 5.97497 14.215 4.87897 13.121C4.31656 12.5584 4.00061 11.7955 4.00061 11C4.00061 10.2045 4.31656 9.44158 4.87897 8.879L12 1.758L19.121 8.879C19.6834 9.44158 19.9993 10.2045 19.9993 11C19.9993 11.7955 19.6834 12.5584 19.121 13.121C18.027 14.216 16.142 14.261 15 13.236V18C15 19.654 13.654 21 12 21ZM11 8.414V18C11.0115 18.2575 11.1219 18.5006 11.3082 18.6787C11.4944 18.8569 11.7422 18.9563 12 18.9563C12.2577 18.9563 12.5055 18.8569 12.6918 18.6787C12.8781 18.5006 12.9885 18.2575 13 18V8.414L16.293 11.707C16.4833 11.889 16.7366 11.9906 17 11.9906C17.2634 11.9906 17.5166 11.889 17.707 11.707C17.8944 11.5195 17.9998 11.2652 17.9998 11C17.9998 10.7348 17.8944 10.4805 17.707 10.293L12 4.586L6.29297 10.293C6.1055 10.4805 6.00018 10.7348 6.00018 11C6.00018 11.2652 6.1055 11.5195 6.29297 11.707C6.48334 11.889 6.73658 11.9906 6.99997 11.9906C7.26336 11.9906 7.5166 11.889 7.70697 11.707L11 8.414Z" fill="white"/>
-                            </svg>
-                            <span class="number-of-upvotes">73</span>
-                        </div>
-                    </footer>
+                    </a>
                 </li>
 
                 <li class="suggestion-card card">
-                    <div class="suggestion-container">
-                        <div class="suggestion-image">
-                            <img src="img/article-picture-small-2.png" alt="">
-                        </div>
-                        <div class="suggestion-content">
-                            <h4>This is a bit long title</h4>
-                            <time datetime="2020-07-13">Jul 13, 2023</time>
-                        </div>
-                    </div>
-
-                    <footer class="article-footer">
-                        <div class="article-author">
-                            <div class="author-picture">
-                                <img src="img/user-picture.png" alt="">
+                    <a href="#">
+                        <div class="suggestion-container">
+                            <div class="suggestion-image">
+                                <img src="img/article-picture-small-2.png" alt="">
                             </div>
-                            <span class="author-name">Justine D.</span>
+                            <div class="suggestion-content">
+                                <h4>This is a bit long title</h4>
+                                <div class="article-author">
+                                    <div class="author-picture">
+                                        <img src="img/user-picture.png" alt="">
+                                    </div>
+                                    <span class="author-name">Justine D.</span>
+                                </div>
+                                <time datetime="2020-07-13">Jul 13, 2023</time>
+                            </div>
                         </div>
-                        <div class="article-comments">
-                            <span class="sr-only">number of comments</span>
-                            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.6803 4C21.6803 2.9 20.8028 2 19.7183 2H3.94363C2.85913 2 1.9718 2.9 1.9718 4V16C1.9718 17.1 2.85913 18 3.94363 18H17.7464L21.6901 22L21.6803 4ZM19.7183 4V17.17L18.5648 16H3.94363V4H19.7183ZM5.91546 12H17.7464V14H5.91546V12ZM5.91546 9H17.7464V11H5.91546V9ZM5.91546 6H17.7464V8H5.91546V6Z" fill="white"/>
-                            </svg>
-                            <span class="number-of-comments">21</span>
-                        </div>
-                        <div class="article-upvotes">
-                            <span class="sr-only">number of upvotes</span>
-                            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 21C10.346 21 8.99997 19.654 8.99997 18V13.236C7.85697 14.26 5.97497 14.215 4.87897 13.121C4.31656 12.5584 4.00061 11.7955 4.00061 11C4.00061 10.2045 4.31656 9.44158 4.87897 8.879L12 1.758L19.121 8.879C19.6834 9.44158 19.9993 10.2045 19.9993 11C19.9993 11.7955 19.6834 12.5584 19.121 13.121C18.027 14.216 16.142 14.261 15 13.236V18C15 19.654 13.654 21 12 21ZM11 8.414V18C11.0115 18.2575 11.1219 18.5006 11.3082 18.6787C11.4944 18.8569 11.7422 18.9563 12 18.9563C12.2577 18.9563 12.5055 18.8569 12.6918 18.6787C12.8781 18.5006 12.9885 18.2575 13 18V8.414L16.293 11.707C16.4833 11.889 16.7366 11.9906 17 11.9906C17.2634 11.9906 17.5166 11.889 17.707 11.707C17.8944 11.5195 17.9998 11.2652 17.9998 11C17.9998 10.7348 17.8944 10.4805 17.707 10.293L12 4.586L6.29297 10.293C6.1055 10.4805 6.00018 10.7348 6.00018 11C6.00018 11.2652 6.1055 11.5195 6.29297 11.707C6.48334 11.889 6.73658 11.9906 6.99997 11.9906C7.26336 11.9906 7.5166 11.889 7.70697 11.707L11 8.414Z" fill="white"/>
-                            </svg>
-                            <span class="number-of-upvotes">73</span>
-                        </div>
-                    </footer>
+                    </a>
                 </li>
 
                 <li class="suggestion-card card">
-                    <div class="suggestion-container">
-                        <div class="suggestion-image">
-                            <img src="img/article-picture-small-3.png" alt="">
-                        </div>
-                        <div class="suggestion-content">
-                            <h4>This is a bit long title</h4>
-                            <time datetime="2020-07-13">Jul 13, 2023</time>
-                        </div>
-                    </div>
-
-                    <footer class="article-footer">
-                        <div class="article-author">
-                            <div class="author-picture">
-                                <img src="img/user-picture.png" alt="">
+                    <a href="#">
+                        <div class="suggestion-container">
+                            <div class="suggestion-image">
+                                <img src="img/article-picture-small-3.png" alt="">
                             </div>
-                            <span class="author-name">Justine D.</span>
+                            <div class="suggestion-content">
+                                <h4>This is a bit long title</h4>
+                                <div class="article-author">
+                                    <div class="author-picture">
+                                        <img src="img/user-picture.png" alt="">
+                                    </div>
+                                    <span class="author-name">Justine D.</span>
+                                </div>
+                                <time datetime="2020-07-13">Jul 13, 2023</time>
+                            </div>
                         </div>
-                        <div class="article-comments">
-                            <span class="sr-only">number of comments</span>
-                            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.6803 4C21.6803 2.9 20.8028 2 19.7183 2H3.94363C2.85913 2 1.9718 2.9 1.9718 4V16C1.9718 17.1 2.85913 18 3.94363 18H17.7464L21.6901 22L21.6803 4ZM19.7183 4V17.17L18.5648 16H3.94363V4H19.7183ZM5.91546 12H17.7464V14H5.91546V12ZM5.91546 9H17.7464V11H5.91546V9ZM5.91546 6H17.7464V8H5.91546V6Z" fill="white"/>
-                            </svg>
-                            <span class="number-of-comments">21</span>
-                        </div>
-                        <div class="article-upvotes">
-                            <span class="sr-only">number of upvotes</span>
-                            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 21C10.346 21 8.99997 19.654 8.99997 18V13.236C7.85697 14.26 5.97497 14.215 4.87897 13.121C4.31656 12.5584 4.00061 11.7955 4.00061 11C4.00061 10.2045 4.31656 9.44158 4.87897 8.879L12 1.758L19.121 8.879C19.6834 9.44158 19.9993 10.2045 19.9993 11C19.9993 11.7955 19.6834 12.5584 19.121 13.121C18.027 14.216 16.142 14.261 15 13.236V18C15 19.654 13.654 21 12 21ZM11 8.414V18C11.0115 18.2575 11.1219 18.5006 11.3082 18.6787C11.4944 18.8569 11.7422 18.9563 12 18.9563C12.2577 18.9563 12.5055 18.8569 12.6918 18.6787C12.8781 18.5006 12.9885 18.2575 13 18V8.414L16.293 11.707C16.4833 11.889 16.7366 11.9906 17 11.9906C17.2634 11.9906 17.5166 11.889 17.707 11.707C17.8944 11.5195 17.9998 11.2652 17.9998 11C17.9998 10.7348 17.8944 10.4805 17.707 10.293L12 4.586L6.29297 10.293C6.1055 10.4805 6.00018 10.7348 6.00018 11C6.00018 11.2652 6.1055 11.5195 6.29297 11.707C6.48334 11.889 6.73658 11.9906 6.99997 11.9906C7.26336 11.9906 7.5166 11.889 7.70697 11.707L11 8.414Z" fill="white"/>
-                            </svg>
-                            <span class="number-of-upvotes">73</span>
-                        </div>
-                    </footer>
+                    </a>
                 </li>
 
                 <li class="suggestion-card card">
-                    <div class="suggestion-container">
-                        <div class="suggestion-image">
-                            <img src="img/article-picture-small-4.png" alt="">
-                        </div>
-                        <div class="suggestion-content">
-                            <h4>This is a bit long title</h4>
-                            <time datetime="2020-07-13">Jul 13, 2023</time>
-                        </div>
-                    </div>
-
-                    <footer class="article-footer">
-                        <div class="article-author">
-                            <div class="author-picture">
-                                <img src="img/user-picture.png" alt="">
+                    <a href="#">
+                        <div class="suggestion-container">
+                            <div class="suggestion-image">
+                                <img src="img/article-picture-small-4.png" alt="">
                             </div>
-                            <span class="author-name">Justine D.</span>
+                            <div class="suggestion-content">
+                                <h4>This is a bit long title</h4>
+                                <div class="article-author">
+                                    <div class="author-picture">
+                                        <img src="img/user-picture.png" alt="">
+                                    </div>
+                                    <span class="author-name">Justine D.</span>
+                                </div>
+                                <time datetime="2020-07-13">Jul 13, 2023</time>
+                            </div>
                         </div>
-                        <div class="article-comments">
-                            <span class="sr-only">number of comments</span>
-                            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.6803 4C21.6803 2.9 20.8028 2 19.7183 2H3.94363C2.85913 2 1.9718 2.9 1.9718 4V16C1.9718 17.1 2.85913 18 3.94363 18H17.7464L21.6901 22L21.6803 4ZM19.7183 4V17.17L18.5648 16H3.94363V4H19.7183ZM5.91546 12H17.7464V14H5.91546V12ZM5.91546 9H17.7464V11H5.91546V9ZM5.91546 6H17.7464V8H5.91546V6Z" fill="white"/>
-                            </svg>
-                            <span class="number-of-comments">21</span>
-                        </div>
-                        <div class="article-upvotes">
-                            <span class="sr-only">number of upvotes</span>
-                            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 21C10.346 21 8.99997 19.654 8.99997 18V13.236C7.85697 14.26 5.97497 14.215 4.87897 13.121C4.31656 12.5584 4.00061 11.7955 4.00061 11C4.00061 10.2045 4.31656 9.44158 4.87897 8.879L12 1.758L19.121 8.879C19.6834 9.44158 19.9993 10.2045 19.9993 11C19.9993 11.7955 19.6834 12.5584 19.121 13.121C18.027 14.216 16.142 14.261 15 13.236V18C15 19.654 13.654 21 12 21ZM11 8.414V18C11.0115 18.2575 11.1219 18.5006 11.3082 18.6787C11.4944 18.8569 11.7422 18.9563 12 18.9563C12.2577 18.9563 12.5055 18.8569 12.6918 18.6787C12.8781 18.5006 12.9885 18.2575 13 18V8.414L16.293 11.707C16.4833 11.889 16.7366 11.9906 17 11.9906C17.2634 11.9906 17.5166 11.889 17.707 11.707C17.8944 11.5195 17.9998 11.2652 17.9998 11C17.9998 10.7348 17.8944 10.4805 17.707 10.293L12 4.586L6.29297 10.293C6.1055 10.4805 6.00018 10.7348 6.00018 11C6.00018 11.2652 6.1055 11.5195 6.29297 11.707C6.48334 11.889 6.73658 11.9906 6.99997 11.9906C7.26336 11.9906 7.5166 11.889 7.70697 11.707L11 8.414Z" fill="white"/>
-                            </svg>
-                            <span class="number-of-upvotes">73</span>
-                        </div>
-                    </footer>
+                    </a>
                 </li>
             </ul>
         </section>
