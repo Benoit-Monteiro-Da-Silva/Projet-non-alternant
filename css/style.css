@@ -339,37 +339,41 @@ h4 {
   flex-grow: 1;
   max-width: 30rem;
 
-  input[type=text], button {
-    display: block;
-    margin-inline: auto;
-    border: none;
-  }
-
-  input[type=text] {
-    background-color: var(--secondary-color);
-    border-radius: 5px;
-    color: white;
-    height: 39px;
-    width: 100%;
-    padding-inline: 1.2rem;
-  }
-
-  input[type=text]::placeholder, .remember-me-group {
-    text-align: center;
-  }
-
-  a {
+  a:not(.create-account-button) {
     text-decoration: underline;
   }
 }
 
-.user-name-group label, .password-group label:first-child {
+input[type=text], .log-in-button, .create-account-button {
+  display: block;
+  margin-inline: auto;
+  border: none;
+}
+
+input[type=text] {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  color: white;
+  height: 39px;
+  width: 100%;
+  padding-inline: 1.2rem;
+}
+
+input[type=text]::placeholder, .remember-me-group {
+  text-align: center;
+}
+
+.title-label {
   display: block;
   font-weight: 500;
   margin-bottom: 1.2rem;
 }
 
-.user-name-group {
+.connexion-form {
+  margin-bottom: 5.6rem;
+}
+
+.user-name-group, .remember-me-group {
   margin-bottom: 2.4rem;
 }
 
@@ -388,16 +392,11 @@ h4 {
   margin-left: .8rem;
 }
 
-.remember-me-group {
-  margin-bottom: 2.4rem;
-}
-
 .log-in-button {
   background-color: white;
   width: 12rem;
   padding: 1rem;
   border-radius: 5px;
-  margin-bottom: 5.6rem;
 }
 
 .log-in-button:hover {
@@ -413,8 +412,9 @@ h4 {
 .create-account-button {
   background-color: #6E70F6;
   color: white;
-  padding: 1.2rem;
+  padding: 1.6rem;
   border-radius: 5px;
+  width: fit-content;
 }
 
 .create-account-button:hover {
@@ -464,17 +464,22 @@ h4 {
 /**Article page**/
 /***************/
 
-.article, .comments, .suggestions {
+.article-body {
+  padding-inline: var(--mobile-padding-inline);
+}
+
+.article-main {
+  margin-top: calc(var(--mobile-header-icon-size) + 6.4rem);
   margin-bottom: 16rem;
+}
+
+.article, .comments, .suggestions {
+  margin-bottom: 6rem;
   display: none;
 
   &.active-section {
     display: block;
   }
-}
-
-.article-body {
-  padding-inline: var(--mobile-padding-inline);
 }
 
 .comments-list, .suggestions-list {
@@ -498,10 +503,6 @@ h4 {
 }
 
 /*Article*/
-
-.full-article {
-  margin-top: calc(var(--mobile-header-icon-size) + 6.4rem);
-}
 
 .article-hero {
   display: flex;

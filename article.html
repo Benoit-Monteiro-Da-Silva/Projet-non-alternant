@@ -61,7 +61,7 @@
                 </div>
                 <button class="log-in-button">Log-in</button>
             </form>
-            <button class="create-account-button">Create New Account</button>
+            <a href="account-creation.html" class="create-account-button">Create New Account</a>
             <button class="close-modal-button" id="close-connexion-modal-button">
                 <span class="sr-only">Close modal</span>
                 <svg aria-hidden="true" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -91,7 +91,7 @@
         </button>
     </div>
 
-    <main role="main">
+    <main role="main" class="article-main">
         <section class="full-article">
 
             <div class="article-hero">
@@ -312,6 +312,29 @@
                 </li>
             </ul>
         </section>
+
+        <nav class="article-nav-buttons">
+            <button class="article-button button-active">
+                <svg aria-hidden="true" width="19" height="18" viewBox="0 0 19 18" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.5 2C18.5 0.897 17.603 0 16.5 0H2.5C1.397 0 0.5 0.897 0.5 2V16C0.5 17.103 1.397 18 2.5 18H16.5C17.603 18 18.5 17.103 18.5 16V2ZM2.5 16V2H16.5L16.502 16H2.5Z"/>
+                    <path d="M4.5 4H6.498V6H4.5V4ZM8.5 4H14.5V6H8.5V4ZM4.5 8H6.498V10H4.5V8ZM8.5 8H14.5V10H8.5V8ZM4.5 12H6.498V14H4.5V12ZM8.5 12H14.5V14H8.5V12Z"/>
+                </svg>
+                <span>Article</span>
+            </button>
+            <button class="article-button">
+                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.6803 4C21.6803 2.9 20.8028 2 19.7183 2H3.94363C2.85913 2 1.9718 2.9 1.9718 4V16C1.9718 17.1 2.85913 18 3.94363 18H17.7464L21.6901 22L21.6803 4ZM19.7183 4V17.17L18.5648 16H3.94363V4H19.7183ZM5.91546 12H17.7464V14H5.91546V12ZM5.91546 9H17.7464V11H5.91546V9ZM5.91546 6H17.7464V8H5.91546V6Z"/>
+                </svg>
+                <span class="sr-only">Comments</span>
+                <span>(21)</span>
+            </button>
+            <button class="article-button">
+                <svg aria-hidden="true" width="21" height="20" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.83331 15L9.03331 8.2L15.8333 5L12.6333 11.8L5.83331 15ZM10.8333 9.1C10.5946 9.1 10.3657 9.19482 10.1969 9.3636C10.0281 9.53239 9.93331 9.76131 9.93331 10C9.93331 10.2387 10.0281 10.4676 10.1969 10.6364C10.3657 10.8052 10.5946 10.9 10.8333 10.9C11.072 10.9 11.3009 10.8052 11.4697 10.6364C11.6385 10.4676 11.7333 10.2387 11.7333 10C11.7333 9.76131 11.6385 9.53239 11.4697 9.3636C11.3009 9.19482 11.072 9.1 10.8333 9.1ZM10.8333 0C12.1465 0 13.4469 0.258658 14.6601 0.761205C15.8734 1.26375 16.9758 2.00035 17.9044 2.92893C18.833 3.85752 19.5696 4.95991 20.0721 6.17317C20.5747 7.38642 20.8333 8.68678 20.8333 10C20.8333 12.6522 19.7797 15.1957 17.9044 17.0711C16.029 18.9464 13.4855 20 10.8333 20C9.52009 20 8.21973 19.7413 7.00648 19.2388C5.79322 18.7362 4.69083 17.9997 3.76225 17.0711C1.88688 15.1957 0.833313 12.6522 0.833313 10C0.833313 7.34784 1.88688 4.8043 3.76225 2.92893C5.63761 1.05357 8.18115 0 10.8333 0ZM10.8333 2C8.71158 2 6.67675 2.84285 5.17646 4.34315C3.67617 5.84344 2.83331 7.87827 2.83331 10C2.83331 12.1217 3.67617 14.1566 5.17646 15.6569C6.67675 17.1571 8.71158 18 10.8333 18C12.955 18 14.9899 17.1571 16.4902 15.6569C17.9905 14.1566 18.8333 12.1217 18.8333 10C18.8333 7.87827 17.9905 5.84344 16.4902 4.34315C14.9899 2.84285 12.955 2 10.8333 2Z"/>
+                </svg>
+                <span class="sr-only">Similar articles</span>  
+            </button>
+        </nav>
 
     </main>
 

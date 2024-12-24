@@ -44,11 +44,11 @@
         <div class="connexion-modal-container">
             <form action="#" method="get" class="connexion-form">
                 <div class="user-name-group">
-                    <label for="user-name">User name</label>
+                    <label for="user-name" class="title-label">User name</label>
                     <input type="text" placeholder="User name" id="user-name" name="user-name">
                 </div>
                 <div class="password-group">
-                    <label for="password">Password</label>
+                    <label for="password" class="title-label">Password</label>
                     <input type="text" placeholder="Password" id="password" name="password">
                     <div class="see-password-group">
                         <input type="checkbox" id="see-password-checkbox">
@@ -62,7 +62,7 @@
                 </div>
                 <button class="log-in-button">Log-in</button>
             </form>
-            <button class="create-account-button">Create New Account</button>
+            <a href="account-creation.html" class="create-account-button">Create New Account</a>
             <button class="close-modal-button" id="close-connexion-modal-button">
                 <span class="sr-only">Close modal</span>
                 <svg aria-hidden="true" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,7 +94,7 @@
 
     <main role="main">
         <section class="section-hero">
-            <h1>Code-Sharing</h1>
+            <h1 class="small-screen-only">Code-Sharing</h1>
             <h2>Explore the dev world !</h2>
             <span>&lt; / &gt;</span>
             

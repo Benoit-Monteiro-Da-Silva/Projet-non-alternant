@@ -68,16 +68,25 @@ const toggleButton = (e) => {
     articleButtons.forEach((button) => {
         button.classList.remove('button-active')
     })
-    e.currentTarget.classList.add('button-active')
     articleSection.classList.remove('active-section')
     commentsSection.classList.remove('active-section')
     suggestionsSection.classList.remove('active-section')
-    if (e.currentTarget == articleButtons[0]) {
+    // e.currentTarget.classList.add('button-active')
+    if (e.currentTarget == articleButtons[0] || e.currentTarget == articleButtons[3]) {
         articleSection.classList.add('active-section')
-    } else if (e.currentTarget == articleButtons[1]) {
+        articleButtons[0].classList.add('button-active')
+        articleButtons[3].classList.add('button-active')
+    } else if (e.currentTarget == articleButtons[1] || e.currentTarget == articleButtons[4]) {
         commentsSection.classList.add('active-section')
-    } else if (e.currentTarget ==  articleButtons[2]) {
+        articleButtons[1].classList.add('button-active')
+        articleButtons[4].classList.add('button-active')
+    } else if (e.currentTarget ==  articleButtons[2] || e.currentTarget == articleButtons[5]) {
         suggestionsSection.classList.add('active-section')
+        articleButtons[2].classList.add('button-active')
+        articleButtons[5].classList.add('button-active')
+    }
+    if (e.currentTarget == articleButtons[3] || e.currentTarget == articleButtons[4] || e.currentTarget == articleButtons[5]) {
+        window.scrollTo(0 , 50);
     }
 }
 
